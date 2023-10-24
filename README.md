@@ -2,8 +2,8 @@
 
 ## How to generate types
 
-1. Update the WSDL files to the latest version by running `git submodule foreach git pull`.
-1. Run the type generation script with `ts-node main.ts`.
+1. Update the WSDL files to the latest version by running `bun run reload-wsdl`.
+1. Run the type generation script with `bun run start`.
 1. The resulting definition files will be in the `./output` folder.
 
 ## How to use types
