@@ -1,0 +1,3 @@
+[submodule "wsdl"]
+	path = wsdl
+	url = https://github.com/forcedotcom/wsdl.git
