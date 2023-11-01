@@ -15,6 +15,72 @@ import type {
 const wsdlFolder = './wsdl/resources';
 const outputFolder = './output';
 
+const reservedWords = ['abstract',
+	'arguments',
+	'await',
+	'boolean',
+	'break',
+	'byte',
+	'case',
+	'catch',
+	'char',
+	'class',
+	'const',
+	'continue',
+	'debugger',
+	'default',
+	'delete',
+	'do',
+	'double',
+	'else',
+	'enum',
+	'eval',
+	'export',
+	'extends',
+	'false',
+	'final',
+	'finally',
+	'float',
+	'for',
+	'function',
+	'goto',
+	'if',
+	'implements',
+	'import',
+	'in',
+	'instanceof',
+	'int',
+	'interface',
+	'let',
+	'long',
+	'native',
+	'new',
+	'null',
+	'package',
+	'private',
+	'protected',
+	'public',
+	'return',
+	'short',
+	'static',
+	'super',
+	'switch',
+	'synchronized',
+	'this',
+	'throw',
+	'throws',
+	'transient',
+	'true',
+	'try',
+	'typeof',
+	'var',
+	'void',
+	'volatile',
+	'while',
+	'with',
+	'yield',
+];
+
 fs.readdirSync(wsdlFolder).forEach(
 	(wsdlFile: string) => {
 		console.dir(wsdlFile);
@@ -32,6 +98,9 @@ fs.readdirSync(wsdlFolder).forEach(
 
 function convertWsdlToTypescript(wsdl: string): string {
 	let output = '';
+
+	output += '/* eslint-disable @typescript-eslint/no-explicit-any */\n';
+	output += '/* eslint-disable @typescript-eslint/no-empty-interface */\n\n';
 
 	parseString(wsdl
 	// Remove the xsd namespace prefix, because partner.wsdl does not use it.
@@ -110,7 +179,7 @@ function convertWsdlToTypescript(wsdl: string): string {
 function treatSimpleTypeNode(simpleTypeNode: SimpleTypeNode): string {
 	let simpleNodeOutput = '';
 
-	const typeName: string = simpleTypeNode.$.name || '';
+	const typeName: string = treatTypeName(simpleTypeNode.$.name || '');
 	const typePrimitive: string = simpleTypeNode.restriction.$.base || '';
 
 	if (typePrimitive === 'string') {
@@ -173,7 +242,7 @@ function treatSimpleTypeNode(simpleTypeNode: SimpleTypeNode): string {
 function treatComplexTypeNode(complexTypeNode: ComplexTypeNode): string {
 	let complexNodeOutput = '';
 
-	const typeName: string = complexTypeNode.$?.name ?? '';
+	const typeName: string = treatTypeName(complexTypeNode.$?.name ?? '');
 	let sequenceNode: SequenceNode | string | undefined;
 	let typeStructure: string;
 
@@ -189,7 +258,7 @@ function treatComplexTypeNode(complexTypeNode: ComplexTypeNode): string {
 		case 'complexContent': {
 			const updatedComplexTypeNode: ComplexTypeNodeWithComplexContent = complexTypeNode as ComplexTypeNodeWithComplexContent;
 			const parentType: string | undefined = updatedComplexTypeNode.complexContent.extension.$.base?.replace('tns_', '');
-			complexNodeOutput += parentType ? ' extends ' + capitalizeFirstLetter(parentType) : '';
+			complexNodeOutput += parentType ? ' extends ' + treatTypeName(parentType) : '';
 			sequenceNode = updatedComplexTypeNode.complexContent.extension.sequence;
 			break;
 		}
@@ -221,7 +290,7 @@ function treatComplexTypeNode(complexTypeNode: ComplexTypeNode): string {
 function treatElementNode(elementNode: ElementNode): string {
 	let elementNodeOutput = '';
 
-	const typeName: string = elementNode.$?.name || '';
+	const typeName: string = treatTypeName(elementNode.$?.name || '');
 	const sequenceNode: SequenceNode | string = elementNode.complexType?.sequence ?? '';
 
 	elementNodeOutput += 'export interface ' + typeName;
@@ -250,7 +319,7 @@ function treatAttribute(elementNode: NodeWithAttributes): string {
 	console.assert(fieldTypeXml !== undefined, 'A field type is undefined');
 
 	const optional: string = (minOccurs === '0' || nillable === 'true') ? '?' : '';
-	attributeOutput += '    ' + fieldName + optional + ' : ';
+	attributeOutput += '    ' + fieldName + optional + ': ';
 
 	const fieldType: string = translateTypeName(fieldTypeXml ?? '') ?? 'any';
 
@@ -337,8 +406,12 @@ function translateTypeName(fieldTypeXml: string): string {
 	return fieldType;
 }
 
-function capitalizeFirstLetter(str: string): string {
-	return str.slice(0, 1).toUpperCase() + str.slice(1);
+function treatTypeName(str: string): string {
+	if (reservedWords.includes(str)) {
+		str += '_';
+	}
+
+	return str;
 }
 
 function arraynge<Type>(input: Type | Type[] | undefined): Type[] {
@@ -348,3 +421,5 @@ function arraynge<Type>(input: Type | Type[] | undefined): Type[] {
 
 	return Array.isArray(input) ? input : [input];
 }
+
+

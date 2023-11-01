@@ -1,7 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-empty-interface */
+
 export interface sObject {
-    type : string;
-    fieldsToNull? : string | string[];
-    Id? : ID;
+    type: string;
+    fieldsToNull?: string | string[];
+    Id?: ID;
 }
 
 export type ID = string;
@@ -1496,480 +1499,480 @@ export type OwnerChangeOptionType = 'EnforceNewOwnerHasReadAccess'
 export type RequestOrigin = 'ListViewMetadata' 
       | 'ListViewRecords';
 
-export interface address extends Location {
-    city? : string;
-    country? : string;
-    countryCode? : string;
-    geocodeAccuracy? : string;
-    postalCode? : string;
-    state? : string;
-    stateCode? : string;
-    street? : string;
+export interface address extends location {
+    city?: string;
+    country?: string;
+    countryCode?: string;
+    geocodeAccuracy?: string;
+    postalCode?: string;
+    state?: string;
+    stateCode?: string;
+    street?: string;
 }
 
 export interface location {
-    latitude? : number;
-    longitude? : number;
+    latitude?: number;
+    longitude?: number;
 }
 
 export interface QueryResult {
-    done : boolean;
-    queryLocator? : QueryLocator;
-    records? : sObject | sObject[];
-    size : number;
+    done: boolean;
+    queryLocator?: QueryLocator;
+    records?: sObject | sObject[];
+    size: number;
 }
 
 export interface SetupBriefcaseResult {
-    briefcaseType : briefcaseType;
+    briefcaseType: briefcaseType;
 }
 
 export interface SearchResult {
-    queryId : string;
-    searchRecords? : SearchRecord | SearchRecord[];
-    searchResultsMetadata? : SearchResultsMetadata;
+    queryId: string;
+    searchRecords?: SearchRecord | SearchRecord[];
+    searchResultsMetadata?: SearchResultsMetadata;
 }
 
 export interface SearchRecord {
-    record : sObject;
-    searchRecordMetadata? : SearchRecordMetadata;
-    snippet? : SearchSnippet;
+    record: sObject;
+    searchRecordMetadata?: SearchRecordMetadata;
+    snippet?: SearchSnippet;
 }
 
 export interface SearchRecordMetadata {
-    searchPromoted : boolean;
-    spellCorrected : boolean;
+    searchPromoted: boolean;
+    spellCorrected: boolean;
 }
 
 export interface SearchSnippet {
-    text? : string;
-    wholeFields? : NameValuePair | NameValuePair[];
+    text?: string;
+    wholeFields?: NameValuePair | NameValuePair[];
 }
 
 export interface SearchResultsMetadata {
-    entityLabelMetadata? : LabelsSearchMetadata | LabelsSearchMetadata[];
-    entityMetadata? : EntitySearchMetadata | EntitySearchMetadata[];
+    entityLabelMetadata?: LabelsSearchMetadata | LabelsSearchMetadata[];
+    entityMetadata?: EntitySearchMetadata | EntitySearchMetadata[];
 }
 
 export interface LabelsSearchMetadata {
-    entityFieldLabels? : NameValuePair | NameValuePair[];
-    entityName : string;
+    entityFieldLabels?: NameValuePair | NameValuePair[];
+    entityName: string;
 }
 
 export interface EntitySearchMetadata {
-    entityName : string;
-    errorMetadata? : EntityErrorMetadata;
-    fieldMetadata? : FieldLevelSearchMetadata | FieldLevelSearchMetadata[];
-    intentQueryMetadata? : EntityIntentQueryMetadata;
-    searchPromotionMetadata? : EntitySearchPromotionMetadata;
-    spellCorrectionMetadata? : EntitySpellCorrectionMetadata;
+    entityName: string;
+    errorMetadata?: EntityErrorMetadata;
+    fieldMetadata?: FieldLevelSearchMetadata | FieldLevelSearchMetadata[];
+    intentQueryMetadata?: EntityIntentQueryMetadata;
+    searchPromotionMetadata?: EntitySearchPromotionMetadata;
+    spellCorrectionMetadata?: EntitySpellCorrectionMetadata;
 }
 
 export interface FieldLevelSearchMetadata {
-    label? : string;
-    name : string;
-    type? : string;
+    label?: string;
+    name: string;
+    type?: string;
 }
 
 export interface EntitySpellCorrectionMetadata {
-    correctedQuery : string;
-    hasNonCorrectedResults : boolean;
+    correctedQuery: string;
+    hasNonCorrectedResults: boolean;
 }
 
 export interface EntitySearchPromotionMetadata {
-    promotedResultCount : number;
+    promotedResultCount: number;
 }
 
 export interface EntityIntentQueryMetadata {
-    intentQuery : boolean;
-    message? : string;
+    intentQuery: boolean;
+    message?: string;
 }
 
 export interface EntityErrorMetadata {
-    errorCode? : string;
-    message? : string;
+    errorCode?: string;
+    message?: string;
 }
 
 export interface RelationshipReferenceTo {
-    referenceTo? : string | string[];
+    referenceTo?: string | string[];
 }
 
 export interface RecordTypesSupported {
-    recordTypeInfos? : RecordTypeInfo | RecordTypeInfo[];
+    recordTypeInfos?: RecordTypeInfo | RecordTypeInfo[];
 }
 
 export interface JunctionIdListNames {
-    names? : string | string[];
+    names?: string | string[];
 }
 
 export interface SearchLayoutButtonsDisplayed {
-    applicable : boolean;
-    buttons? : SearchLayoutButton | SearchLayoutButton[];
+    applicable: boolean;
+    buttons?: SearchLayoutButton | SearchLayoutButton[];
 }
 
 export interface SearchLayoutButton {
-    apiName : string;
-    label : string;
+    apiName: string;
+    label: string;
 }
 
 export interface SearchLayoutFieldsDisplayed {
-    applicable : boolean;
-    fields? : SearchLayoutField | SearchLayoutField[];
+    applicable: boolean;
+    fields?: SearchLayoutField | SearchLayoutField[];
 }
 
 export interface SearchLayoutField {
-    apiName : string;
-    label : string;
-    sortable : boolean;
+    apiName: string;
+    label: string;
+    sortable: boolean;
 }
 
 export interface NameValuePair {
-    name : string;
-    value : string;
+    name: string;
+    value: string;
 }
 
 export interface NameObjectValuePair {
-    isVisible? : boolean;
-    name : string;
-    value : any | any[];
+    isVisible?: boolean;
+    name: string;
+    value: any | any[];
 }
 
 export interface NameValueTypeTriple {
-    name : string;
-    type : string;
-    value : string;
+    name: string;
+    type: string;
+    value: string;
 }
 
 export interface SimpleNameObjectValuePair {
-    name : string;
-    value : any;
+    name: string;
+    value: any;
 }
 
 export interface FlowInterviewWrapperContext {
-    inputs? : SimpleNameObjectValuePair | SimpleNameObjectValuePair[];
-    wrapperContextType : string;
+    inputs?: SimpleNameObjectValuePair | SimpleNameObjectValuePair[];
+    wrapperContextType: string;
 }
 
 export interface StartFlowInterviewRequest {
-    flowName : string;
-    inputs? : NameObjectValuePair | NameObjectValuePair[];
-    versionId : string;
-    debug? : FlowInterviewDebugInput;
-    wrapperContext? : FlowInterviewWrapperContext;
+    flowName: string;
+    inputs?: NameObjectValuePair | NameObjectValuePair[];
+    versionId: string;
+    debug?: FlowInterviewDebugInput;
+    wrapperContext?: FlowInterviewWrapperContext;
 }
 
 export interface NavigateFlowInterviewRequest {
-    action : string;
-    screenInputs? : NameObjectValuePair | NameObjectValuePair[];
-    state : string;
-    debug? : FlowInterviewDebugInput;
-    lcErrors? : NameValuePair | NameValuePair[];
+    action: string;
+    screenInputs?: NameObjectValuePair | NameObjectValuePair[];
+    state: string;
+    debug?: FlowInterviewDebugInput;
+    lcErrors?: NameValuePair | NameValuePair[];
 }
 
 export interface ResumeFlowInterviewRequest {
-    guid : string;
+    guid: string;
 }
 
 export interface RunFlowTestInput {
-    testIdOrName? : string | string[];
-    showTrace? : boolean;
-    flowVersionId : string;
+    testIdOrName?: string | string[];
+    showTrace?: boolean;
+    flowVersionId: string;
 }
 
 export interface RunFlowTestResult {
-    assertionResults? : FlowTestAssertionResult | FlowTestAssertionResult[];
-    endDateTime : Date;
-    flowTestId : string;
-    flowTestName : string;
-    interviewErrors? : string | string[];
-    interviewStatus : string;
-    startDateTime : Date;
-    status : string;
-    trace : string;
+    assertionResults?: FlowTestAssertionResult | FlowTestAssertionResult[];
+    endDateTime: Date;
+    flowTestId: string;
+    flowTestName: string;
+    interviewErrors?: string | string[];
+    interviewStatus: string;
+    startDateTime: Date;
+    status: string;
+    trace: string;
 }
 
 export interface GetFlowInterviewHistoryRequest {
-    debug? : FlowInterviewDebugInput;
-    guid : string;
+    debug?: FlowInterviewDebugInput;
+    guid: string;
 }
 
 export interface FlowAccessInput {
-    flowEnumOrDefId : string;
-    flowVersionId : string;
-    isBasedOnCommUserAccessCheck : boolean;
+    flowEnumOrDefId: string;
+    flowVersionId: string;
+    isBasedOnCommUserAccessCheck: boolean;
 }
 
 export interface CanViewFlowResult {
-    canView : boolean;
-    errors? : Error | Error[];
+    canView: boolean;
+    errors?: Error | Error[];
 }
 
 export interface FlowInterviewAction {
-    id : string;
-    label : string;
+    id: string;
+    label: string;
 }
 
 export interface FlowTest {
-    description? : string;
-    label : string;
-    referenceFlow : string;
-    testPoints? : FlowTestPoint | FlowTestPoint[];
+    description?: string;
+    label: string;
+    referenceFlow: string;
+    testPoints?: FlowTestPoint | FlowTestPoint[];
 }
 
 export interface FlowTestPoint {
-    asserts? : FlowTestAssert | FlowTestAssert[];
-    elementDeveloperName : string;
-    parameters? : FlowTestParameter | FlowTestParameter[];
+    asserts?: FlowTestAssert | FlowTestAssert[];
+    elementDeveloperName: string;
+    parameters?: FlowTestParameter | FlowTestParameter[];
 }
 
 export interface FlowTestAssert {
-    assertErrorMessage? : string;
-    conditions? : FlowTestCondition | FlowTestCondition[];
+    assertErrorMessage?: string;
+    conditions?: FlowTestCondition | FlowTestCondition[];
 }
 
 export interface FlowTestAssertionResult {
-    conditionsText? : string | string[];
-    failMessage : string;
-    errorMessage : string;
-    status? : string;
+    conditionsText?: string | string[];
+    failMessage: string;
+    errorMessage: string;
+    status?: string;
 }
 
 export interface FlowTestCondition {
-    leftValueReference : string;
-    Operator? : string;
-    rightValue? : FlowTestReferenceOrValue;
+    leftValueReference: string;
+    Operator?: string;
+    rightValue?: FlowTestReferenceOrValue;
 }
 
 export interface FlowTestReferenceOrValue {
-    booleanValue? : boolean;
-    dateTimeValue? : Date;
-    dateValue? : Date;
-    numberValue? : number;
-    sobjectValue? : string;
-    stringValue? : string;
+    booleanValue?: boolean;
+    dateTimeValue?: Date;
+    dateValue?: Date;
+    numberValue?: number;
+    sobjectValue?: string;
+    stringValue?: string;
 }
 
 export interface FlowTestParameter {
-    leftValueReference : string;
-    type : string;
-    value : FlowTestReferenceOrValue;
+    leftValueReference: string;
+    type: string;
+    value: FlowTestReferenceOrValue;
 }
 
 export interface GenerateFlowTestResult {
-    flowTest? : FlowTest;
+    flowTest?: FlowTest;
 }
 
 export interface NavigateFlowInterviewResult {
-    activeStages? : FlowInterviewStage | FlowInterviewStage[];
-    apiVersionRuntime? : number;
-    availableActions? : FlowInterviewAction | FlowInterviewAction[];
-    currentFlowVersionId? : string;
-    currentStage? : FlowInterviewStage;
-    debug? : FlowInterviewDebugOutput;
-    errorMessages? : string | string[];
-    flowLabel : string;
-    formulas? : FlowInterviewReactiveFormula | FlowInterviewReactiveFormula[];
-    guid : string;
-    helpText? : string;
-    interviewStatus : string;
-    localActionName? : string;
-    localActionInputs? : FlowInterviewLocalActionInput | FlowInterviewLocalActionInput[];
-    localActionOutputs? : FlowInterviewLocalActionOutput | FlowInterviewLocalActionOutput[];
-    locationName? : string;
-    outputVariables? : FlowInterviewOutputVariable | FlowInterviewOutputVariable[];
-    pausedText? : string;
-    screenFields? : FlowInterviewScreenField | FlowInterviewScreenField[];
-    showFooter : boolean;
-    showHeader : boolean;
-    state? : string;
+    activeStages?: FlowInterviewStage | FlowInterviewStage[];
+    apiVersionRuntime?: number;
+    availableActions?: FlowInterviewAction | FlowInterviewAction[];
+    currentFlowVersionId?: string;
+    currentStage?: FlowInterviewStage;
+    debug?: FlowInterviewDebugOutput;
+    errorMessages?: string | string[];
+    flowLabel: string;
+    formulas?: FlowInterviewReactiveFormula | FlowInterviewReactiveFormula[];
+    guid: string;
+    helpText?: string;
+    interviewStatus: string;
+    localActionName?: string;
+    localActionInputs?: FlowInterviewLocalActionInput | FlowInterviewLocalActionInput[];
+    localActionOutputs?: FlowInterviewLocalActionOutput | FlowInterviewLocalActionOutput[];
+    locationName?: string;
+    outputVariables?: FlowInterviewOutputVariable | FlowInterviewOutputVariable[];
+    pausedText?: string;
+    screenFields?: FlowInterviewScreenField | FlowInterviewScreenField[];
+    showFooter: boolean;
+    showHeader: boolean;
+    state?: string;
 }
 
 export interface FlowInterviewScreenField {
-    choices? : FlowInterviewChoice | FlowInterviewChoice[];
-    contextMap? : NameValuePair | NameValuePair[];
-    dataType : string;
-    errorMessages? : string | string[];
-    extensionName? : string;
-    extensionType? : string;
-    fields? : FlowInterviewScreenField | FlowInterviewScreenField[];
-    fieldType : string;
-    helpText? : string;
-    inputs? : FlowInterviewScreenFieldInput | FlowInterviewScreenFieldInput[];
-    isReactiveOnInit : boolean;
-    isRequired : boolean;
-    isValidValue : boolean;
-    label : string;
-    metadataValues? : FlowInterviewMetadataValue | FlowInterviewMetadataValue[];
-    name : string;
-    objectFieldReference? : FlowInterviewObjectFieldReference | FlowInterviewObjectFieldReference[];
-    outputs? : FlowInterviewScreenFieldOutput | FlowInterviewScreenFieldOutput[];
-    regionContainerType? : string;
-    scale? : number;
-    triggersUpdate : boolean;
-    value? : any;
-    valueSources? : string | string[];
-    visibilityRule : string;
+    choices?: FlowInterviewChoice | FlowInterviewChoice[];
+    contextMap?: NameValuePair | NameValuePair[];
+    dataType: string;
+    errorMessages?: string | string[];
+    extensionName?: string;
+    extensionType?: string;
+    fields?: FlowInterviewScreenField | FlowInterviewScreenField[];
+    fieldType: string;
+    helpText?: string;
+    inputs?: FlowInterviewScreenFieldInput | FlowInterviewScreenFieldInput[];
+    isReactiveOnInit: boolean;
+    isRequired: boolean;
+    isValidValue: boolean;
+    label: string;
+    metadataValues?: FlowInterviewMetadataValue | FlowInterviewMetadataValue[];
+    name: string;
+    objectFieldReference?: FlowInterviewObjectFieldReference | FlowInterviewObjectFieldReference[];
+    outputs?: FlowInterviewScreenFieldOutput | FlowInterviewScreenFieldOutput[];
+    regionContainerType?: string;
+    scale?: number;
+    triggersUpdate: boolean;
+    value?: any;
+    valueSources?: string | string[];
+    visibilityRule: string;
 }
 
 export interface FlowInterviewScreenFieldInput {
-    dataType : string;
-    isCollection : boolean;
-    name : string;
-    objectType? : string;
-    value : any | any[];
-    valueSources? : string | string[];
+    dataType: string;
+    isCollection: boolean;
+    name: string;
+    objectType?: string;
+    value: any | any[];
+    valueSources?: string | string[];
 }
 
 export interface FlowInterviewReactiveFormula {
-    contextMap? : NameValueTypeTriple | NameValueTypeTriple[];
-    expression : string;
-    name : string;
-    outputType : string;
-    valueSources? : string | string[];
+    contextMap?: NameValueTypeTriple | NameValueTypeTriple[];
+    expression: string;
+    name: string;
+    outputType: string;
+    valueSources?: string | string[];
 }
 
 export interface FlowInterviewScreenFieldOutput {
-    dataType : string;
-    isCollection : boolean;
-    name : string;
-    objectType? : string;
+    dataType: string;
+    isCollection: boolean;
+    name: string;
+    objectType?: string;
 }
 
 export interface FlowInterviewLocalActionInput {
-    dataType : string;
-    isCollection : boolean;
-    name : string;
-    objectType? : string;
-    value : any | any[];
+    dataType: string;
+    isCollection: boolean;
+    name: string;
+    objectType?: string;
+    value: any | any[];
 }
 
 export interface FlowInterviewLocalActionOutput {
-    dataType : string;
-    isCollection : boolean;
-    name : string;
-    objectType? : string;
+    dataType: string;
+    isCollection: boolean;
+    name: string;
+    objectType?: string;
 }
 
 export interface FlowInterviewMetadataValue {
-    name : string;
-    value : any | any[];
+    name: string;
+    value: any | any[];
 }
 
 export interface FlowInterviewChoice {
-    choiceValue? : string;
-    isSelected : boolean;
-    label : string;
-    name : string;
-    text? : string;
-    userInput? : FlowInterviewChoiceUserInput;
+    choiceValue?: string;
+    isSelected: boolean;
+    label: string;
+    name: string;
+    text?: string;
+    userInput?: FlowInterviewChoiceUserInput;
 }
 
 export interface FlowInterviewChoiceUserInput {
-    dataType : string;
-    errorMessages? : string | string[];
-    isRequired : boolean;
-    isValidValue : boolean;
-    label : string;
-    name : string;
-    value? : any;
+    dataType: string;
+    errorMessages?: string | string[];
+    isRequired: boolean;
+    isValidValue: boolean;
+    label: string;
+    name: string;
+    value?: any;
 }
 
 export interface FlowInterviewOutputVariable {
-    dataType : string;
-    description? : string;
-    isCollection : boolean;
-    name : string;
-    objectType? : string;
-    flowName : string;
-    value : any | any[];
+    dataType: string;
+    description?: string;
+    isCollection: boolean;
+    name: string;
+    objectType?: string;
+    flowName: string;
+    value: any | any[];
 }
 
 export interface FlowInterviewStage {
-    label : string;
-    name : string;
+    label: string;
+    name: string;
 }
 
 export interface FlowInterviewDebugInput {
-    collectApexLimitUsage? : boolean;
-    debugAsUserId? : string;
-    debugWaitInput? : FlowInterviewDebugWaitInput;
-    debugWaits? : boolean;
-    enableRollbackMode? : boolean;
-    enableTrace? : boolean;
-    isForNewDebugging? : boolean;
-    useLatestSubflow? : boolean;
+    collectApexLimitUsage?: boolean;
+    debugAsUserId?: string;
+    debugWaitInput?: FlowInterviewDebugWaitInput;
+    debugWaits?: boolean;
+    enableRollbackMode?: boolean;
+    enableTrace?: boolean;
+    isForNewDebugging?: boolean;
+    useLatestSubflow?: boolean;
 }
 
 export interface FlowInterviewDebugWaitInput {
-    eventOutputs? : NameObjectValuePair | NameObjectValuePair[];
-    waitEventName? : string;
+    eventOutputs?: NameObjectValuePair | NameObjectValuePair[];
+    waitEventName?: string;
 }
 
 export interface FlowInterviewDebugOutput {
-    trace? : string;
-    waitDebugOutput? : FlowInterviewDebugWaitOutput | FlowInterviewDebugWaitOutput[];
+    trace?: string;
+    waitDebugOutput?: FlowInterviewDebugWaitOutput | FlowInterviewDebugWaitOutput[];
 }
 
 export interface FlowInterviewDebugWaitOutput {
-    eventOutputs? : NameObjectValuePair | NameObjectValuePair[];
-    waitEventName? : string;
+    eventOutputs?: NameObjectValuePair | NameObjectValuePair[];
+    waitEventName?: string;
 }
 
 export interface FlowInterviewObjectFieldReference {
-    objectFieldName? : string;
-    objectName? : string;
-    objectResourceName? : string;
-    recordId? : string;
-    recordTypeId? : string;
+    objectFieldName?: string;
+    objectName?: string;
+    objectResourceName?: string;
+    recordId?: string;
+    recordTypeId?: string;
 }
 
 export interface ClaimsMapping {
-    claimKey : string;
-    claimValue : string;
+    claimKey: string;
+    claimValue: string;
 }
 
 export interface GetUpdatedResult {
-    ids? : ID | ID[];
-    latestDateCovered : Date;
+    ids?: ID | ID[];
+    latestDateCovered: Date;
 }
 
 export interface GetDeletedResult {
-    deletedRecords? : DeletedRecord | DeletedRecord[];
-    earliestDateAvailable : Date;
-    latestDateCovered : Date;
+    deletedRecords?: DeletedRecord | DeletedRecord[];
+    earliestDateAvailable: Date;
+    latestDateCovered: Date;
 }
 
 export interface DeletedRecord {
-    deletedDate : Date;
-    id : ID;
+    deletedDate: Date;
+    id: ID;
 }
 
 export interface OutlookSearchResult {
-    records? : sObject | sObject[];
-    size : number;
+    records?: sObject | sObject[];
+    size: number;
 }
 
 export interface OutlookDescribeResult {
-    inboundEmailType? : string;
-    outboundEmailType? : string;
-    priority? : string;
-    recordTypeId? : ID;
-    status? : string;
+    inboundEmailType?: string;
+    outboundEmailType?: string;
+    priority?: string;
+    recordTypeId?: ID;
+    status?: string;
 }
 
 export interface GetServerTimestampResult {
-    timestamp : Date;
+    timestamp: Date;
 }
 
 export interface ImpersonateUserResult {
-    errors? : Error | Error[];
-    sessionId? : string;
-    success : boolean;
-    userId? : ID;
+    errors?: Error | Error[];
+    sessionId?: string;
+    success: boolean;
+    userId?: ID;
 }
 
 export interface InvalidateSessionsResult {
-    errors? : Error | Error[];
-    success : boolean;
+    errors?: Error | Error[];
+    success: boolean;
 }
 
 export interface SetPasswordResult {
@@ -1979,1691 +1982,1691 @@ export interface ChangeOwnPasswordResult {
 }
 
 export interface ResetPasswordResult {
-    password : string;
+    password: string;
 }
 
 export interface GetAccessInfoResult {
-    accessMap? : AccessMapping | AccessMapping[];
+    accessMap?: AccessMapping | AccessMapping[];
 }
 
 export interface AccessMapping {
-    accessName : string;
-    accessible : boolean;
+    accessName: string;
+    accessible: boolean;
 }
 
 export interface GetUserInfoResult {
-    accessibilityMode : boolean;
-    chatterExternal : boolean;
-    currencySymbol? : string;
-    defaultAppIdForProfile? : ID;
-    orgAttachmentFileSizeLimit : number;
-    orgDefaultCurrencyIsoCode? : string;
-    orgDefaultCurrencyLocale? : string;
-    orgDisallowHtmlAttachments : boolean;
-    orgHasPersonAccounts : boolean;
-    organizationId : ID;
-    organizationMultiCurrency : boolean;
-    organizationName : string;
-    profileId : ID;
-    roleId? : ID;
-    sessionSecondsValid : number;
-    userDefaultCurrencyIsoCode? : string;
-    userEmail : string;
-    userFullName : string;
-    userId : ID;
-    userLanguage : string;
-    userLocale : string;
-    userName : string;
-    userTimeZone : string;
-    userType : string;
-    userUiSkin : string;
+    accessibilityMode: boolean;
+    chatterExternal: boolean;
+    currencySymbol?: string;
+    defaultAppIdForProfile?: ID;
+    orgAttachmentFileSizeLimit: number;
+    orgDefaultCurrencyIsoCode?: string;
+    orgDefaultCurrencyLocale?: string;
+    orgDisallowHtmlAttachments: boolean;
+    orgHasPersonAccounts: boolean;
+    organizationId: ID;
+    organizationMultiCurrency: boolean;
+    organizationName: string;
+    profileId: ID;
+    roleId?: ID;
+    sessionSecondsValid: number;
+    userDefaultCurrencyIsoCode?: string;
+    userEmail: string;
+    userFullName: string;
+    userId: ID;
+    userLanguage: string;
+    userLocale: string;
+    userName: string;
+    userTimeZone: string;
+    userType: string;
+    userUiSkin: string;
 }
 
 export interface LoginResult {
-    metadataServerUrl? : string;
-    passwordExpired : boolean;
-    sandbox : boolean;
-    serverUrl? : string;
-    sessionId? : string;
-    upgradeMessage? : string;
-    upgradeURL? : string;
-    userId? : ID;
-    userInfo? : GetUserInfoResult;
+    metadataServerUrl?: string;
+    passwordExpired: boolean;
+    sandbox: boolean;
+    serverUrl?: string;
+    sessionId?: string;
+    upgradeMessage?: string;
+    upgradeURL?: string;
+    userId?: ID;
+    userInfo?: GetUserInfoResult;
 }
 
 export interface ExtendedErrorDetails {
-    extendedErrorCode : ExtendedErrorCode;
+    extendedErrorCode: ExtendedErrorCode;
 }
 
 export interface Error {
-    extendedErrorDetails? : ExtendedErrorDetails | ExtendedErrorDetails[];
-    fields? : string | string[];
-    message : string;
-    statusCode : StatusCode;
+    extendedErrorDetails?: ExtendedErrorDetails | ExtendedErrorDetails[];
+    fields?: string | string[];
+    message: string;
+    statusCode: StatusCode;
 }
 
 export interface SendEmailError {
-    fields? : string | string[];
-    message : string;
-    statusCode : StatusCode;
-    targetObjectId? : ID;
+    fields?: string | string[];
+    message: string;
+    statusCode: StatusCode;
+    targetObjectId?: ID;
 }
 
 export interface SaveResult {
-    errors? : Error | Error[];
-    id? : ID;
-    success : boolean;
+    errors?: Error | Error[];
+    id?: ID;
+    success: boolean;
 }
 
 export interface RenderEmailTemplateError {
-    fieldName : string;
-    message : string;
-    offset : number;
-    statusCode : StatusCode;
+    fieldName: string;
+    message: string;
+    offset: number;
+    statusCode: StatusCode;
 }
 
 export interface UpsertResult {
-    created : boolean;
-    errors? : Error | Error[];
-    id? : ID;
-    success : boolean;
+    created: boolean;
+    errors?: Error | Error[];
+    id?: ID;
+    success: boolean;
 }
 
 export interface PerformQuickActionResult {
-    contextId? : ID;
-    created : boolean;
-    errors? : Error | Error[];
-    feedItemIds? : ID | ID[];
-    ids? : ID | ID[];
-    success : boolean;
-    successMessage? : string;
+    contextId?: ID;
+    created: boolean;
+    errors?: Error | Error[];
+    feedItemIds?: ID | ID[];
+    ids?: ID | ID[];
+    success: boolean;
+    successMessage?: string;
 }
 
 export interface QuickActionTemplateResult {
-    contextId? : string;
-    defaultValueFormulas? : sObject;
-    defaultValues? : sObject;
-    errors? : Error | Error[];
-    success : boolean;
+    contextId?: string;
+    defaultValueFormulas?: sObject;
+    defaultValues?: sObject;
+    errors?: Error | Error[];
+    success: boolean;
 }
 
 export interface MergeRequest {
-    additionalInformationMap? : AdditionalInformationMap | AdditionalInformationMap[];
-    masterRecord : sObject;
-    recordToMergeIds : ID | ID[];
+    additionalInformationMap?: AdditionalInformationMap | AdditionalInformationMap[];
+    masterRecord: sObject;
+    recordToMergeIds: ID | ID[];
 }
 
 export interface MergeResult {
-    errors? : Error | Error[];
-    id? : ID;
-    mergedRecordIds? : ID | ID[];
-    success : boolean;
-    updatedRelatedIds? : ID | ID[];
+    errors?: Error | Error[];
+    id?: ID;
+    mergedRecordIds?: ID | ID[];
+    success: boolean;
+    updatedRelatedIds?: ID | ID[];
 }
 
 export interface ProcessRequest {
-    comments? : string;
-    nextApproverIds? : ID | ID[];
+    comments?: string;
+    nextApproverIds?: ID | ID[];
 }
 
 export interface ProcessSubmitRequest extends ProcessRequest {
-    objectId : ID;
-    submitterId? : ID;
-    processDefinitionNameOrId? : string;
-    skipEntryCriteria? : boolean;
+    objectId: ID;
+    submitterId?: ID;
+    processDefinitionNameOrId?: string;
+    skipEntryCriteria?: boolean;
 }
 
 export interface ProcessWorkitemRequest extends ProcessRequest {
-    action : string;
-    workitemId : ID;
+    action: string;
+    workitemId: ID;
 }
 
 export interface PerformQuickActionRequest {
-    contextId? : ID;
-    quickActionName : string;
-    records? : sObject | sObject[];
+    contextId?: ID;
+    quickActionName: string;
+    records?: sObject | sObject[];
 }
 
 export interface DescribeAvailableQuickActionResult {
-    actionEnumOrId : string;
-    label : string;
-    name : string;
-    type : string;
+    actionEnumOrId: string;
+    label: string;
+    name: string;
+    type: string;
 }
 
 export interface DescribeQuickActionResult {
-    accessLevelRequired? : ShareAccessLevel;
-    actionEnumOrId : string;
-    canvasApplicationId? : ID;
-    canvasApplicationName? : string;
-    colors? : DescribeColor | DescribeColor[];
-    contextSobjectType? : string;
-    defaultValues? : DescribeQuickActionDefaultValue | DescribeQuickActionDefaultValue[];
-    flowDevName? : string;
-    flowRecordIdVar? : string;
-    height? : number;
-    iconName? : string;
-    iconUrl? : string;
-    icons? : DescribeIcon | DescribeIcon[];
-    label : string;
-    layout? : DescribeLayoutSection;
-    lightningComponentBundleId? : ID;
-    lightningComponentBundleName? : string;
-    lightningComponentQualifiedName? : string;
-    lightningWebComponentBundleId? : ID;
-    lightningWebComponentBundleName? : string;
-    lightningWebComponentQualifiedName? : string;
-    miniIconUrl? : string;
-    mobileExtensionId? : string;
-    name : string;
-    showQuickActionLcHeader : boolean;
-    showQuickActionVfHeader : boolean;
-    targetParentField? : string;
-    targetRecordTypeId? : ID;
-    targetSobjectType? : string;
-    type : string;
-    visualforcePageName? : string;
-    visualforcePageUrl? : string;
-    width? : number;
+    accessLevelRequired?: ShareAccessLevel;
+    actionEnumOrId: string;
+    canvasApplicationId?: ID;
+    canvasApplicationName?: string;
+    colors?: DescribeColor | DescribeColor[];
+    contextSobjectType?: string;
+    defaultValues?: DescribeQuickActionDefaultValue | DescribeQuickActionDefaultValue[];
+    flowDevName?: string;
+    flowRecordIdVar?: string;
+    height?: number;
+    iconName?: string;
+    iconUrl?: string;
+    icons?: DescribeIcon | DescribeIcon[];
+    label: string;
+    layout?: DescribeLayoutSection;
+    lightningComponentBundleId?: ID;
+    lightningComponentBundleName?: string;
+    lightningComponentQualifiedName?: string;
+    lightningWebComponentBundleId?: ID;
+    lightningWebComponentBundleName?: string;
+    lightningWebComponentQualifiedName?: string;
+    miniIconUrl?: string;
+    mobileExtensionId?: string;
+    name: string;
+    showQuickActionLcHeader: boolean;
+    showQuickActionVfHeader: boolean;
+    targetParentField?: string;
+    targetRecordTypeId?: ID;
+    targetSobjectType?: string;
+    type: string;
+    visualforcePageName?: string;
+    visualforcePageUrl?: string;
+    width?: number;
 }
 
 export interface DescribeQuickActionDefaultValue {
-    defaultValue? : string;
-    field : string;
+    defaultValue?: string;
+    field: string;
 }
 
 export interface DescribeVisualForceResult {
-    domain : string;
+    domain: string;
 }
 
 export interface ProcessArticleRequest extends ProcessWorkitemRequest {
-    version : string;
+    version: string;
 }
 
 export interface ProcessResult {
-    actorIds? : ID | ID[];
-    entityId? : ID;
-    errors? : Error | Error[];
-    instanceId? : ID;
-    instanceStatus? : string;
-    newWorkitemIds? : ID | ID[];
-    success : boolean;
+    actorIds?: ID | ID[];
+    entityId?: ID;
+    errors?: Error | Error[];
+    instanceId?: ID;
+    instanceStatus?: string;
+    newWorkitemIds?: ID | ID[];
+    success: boolean;
 }
 
 export interface DescribeWorkitemActionResult {
-    actions? : AllowedWorkitemAction | AllowedWorkitemAction[];
-    errors? : Error | Error[];
-    success : boolean;
-    targetObjectId : ID;
-    workitemId : ID;
+    actions?: AllowedWorkitemAction | AllowedWorkitemAction[];
+    errors?: Error | Error[];
+    success: boolean;
+    targetObjectId: ID;
+    workitemId: ID;
 }
 
 export interface AllowedWorkitemAction {
-    versionRequired : boolean;
-    commentsRequired : boolean;
-    label : string;
-    name : string;
-    nextOwnerRequired : boolean;
+    versionRequired: boolean;
+    commentsRequired: boolean;
+    label: string;
+    name: string;
+    nextOwnerRequired: boolean;
 }
 
 export interface DeleteResult {
-    errors? : Error | Error[];
-    id? : ID;
-    success : boolean;
+    errors?: Error | Error[];
+    id?: ID;
+    success: boolean;
 }
 
 export interface UndeleteResult {
-    errors? : Error | Error[];
-    id? : ID;
-    success : boolean;
+    errors?: Error | Error[];
+    id?: ID;
+    success: boolean;
 }
 
 export interface DeleteByExampleResult {
-    entity? : sObject;
-    errors? : Error | Error[];
-    rowCount : number;
-    success : boolean;
+    entity?: sObject;
+    errors?: Error | Error[];
+    rowCount: number;
+    success: boolean;
 }
 
 export interface EmptyRecycleBinResult {
-    errors? : Error | Error[];
-    id? : ID;
-    success : boolean;
+    errors?: Error | Error[];
+    id?: ID;
+    success: boolean;
 }
 
 export interface LeadConvert {
-    accountId? : ID;
-    accountRecord? : sObject;
-    bypassAccountDedupeCheck? : boolean;
-    bypassContactDedupeCheck? : boolean;
-    contactId? : ID;
-    contactRecord? : sObject;
-    convertedStatus : string;
-    doNotCreateOpportunity : boolean;
-    leadId : ID;
-    opportunityId? : ID;
-    opportunityName? : string;
-    opportunityRecord? : sObject;
-    overwriteLeadSource : boolean;
-    ownerId? : ID;
-    relatedPersonAccountId? : ID;
-    relatedPersonAccountRecord? : sObject;
-    sendNotificationEmail : boolean;
+    accountId?: ID;
+    accountRecord?: sObject;
+    bypassAccountDedupeCheck?: boolean;
+    bypassContactDedupeCheck?: boolean;
+    contactId?: ID;
+    contactRecord?: sObject;
+    convertedStatus: string;
+    doNotCreateOpportunity: boolean;
+    leadId: ID;
+    opportunityId?: ID;
+    opportunityName?: string;
+    opportunityRecord?: sObject;
+    overwriteLeadSource: boolean;
+    ownerId?: ID;
+    relatedPersonAccountId?: ID;
+    relatedPersonAccountRecord?: sObject;
+    sendNotificationEmail: boolean;
 }
 
 export interface LeadConvertResult {
-    accountId? : ID;
-    contactId? : ID;
-    errors? : Error | Error[];
-    leadId? : ID;
-    opportunityId? : ID;
-    relatedPersonAccountId? : ID;
-    success : boolean;
+    accountId?: ID;
+    contactId?: ID;
+    errors?: Error | Error[];
+    leadId?: ID;
+    opportunityId?: ID;
+    relatedPersonAccountId?: ID;
+    success: boolean;
 }
 
 export interface AddCampaignMemberOptions {
-    campaignId? : ID;
-    keepExistingStatus : boolean;
-    leadOrContactIds? : ID;
-    newStatus : string;
-    reportId? : ID;
-    reportMetadata : string;
+    campaignId?: ID;
+    keepExistingStatus: boolean;
+    leadOrContactIds?: ID;
+    newStatus: string;
+    reportId?: ID;
+    reportMetadata: string;
 }
 
 export interface AddCampaignMemberResult {
-    errors? : Error | Error[];
-    numInserts : number;
-    numUpdates : number;
-    saveError : string;
-    success : boolean;
+    errors?: Error | Error[];
+    numInserts: number;
+    numUpdates: number;
+    saveError: string;
+    success: boolean;
 }
 
 export interface DescribeSObjectResult {
-    actionOverrides? : ActionOverride | ActionOverride[];
-    activateable : boolean;
-    associateEntityType? : string;
-    associateParentEntity? : string;
-    childRelationships? : ChildRelationship | ChildRelationship[];
-    compactLayoutable : boolean;
-    createable : boolean;
-    custom : boolean;
-    customSetting : boolean;
-    dataTranslationEnabled? : boolean;
-    deepCloneable : boolean;
-    defaultImplementation? : string;
-    deletable : boolean;
-    deprecatedAndHidden : boolean;
-    feedEnabled : boolean;
-    fields? : Field | Field[];
-    hasSubtypes : boolean;
-    idEnabled : boolean;
-    implementedBy? : string;
-    implementsInterfaces? : string;
-    isInterface : boolean;
-    isSubtype : boolean;
-    keyPrefix? : string;
-    label : string;
-    labelPlural : string;
-    layoutable : boolean;
-    listviewable? : boolean;
-    lookupLayoutable? : boolean;
-    mergeable : boolean;
-    mruEnabled : boolean;
-    name : string;
-    namedLayoutInfos? : NamedLayoutInfo | NamedLayoutInfo[];
-    networkScopeFieldName? : string;
-    queryable : boolean;
-    recordTypeInfos? : RecordTypeInfo | RecordTypeInfo[];
-    replicateable : boolean;
-    retrieveable : boolean;
-    searchLayoutable? : boolean;
-    searchable : boolean;
-    supportedScopes? : ScopeInfo | ScopeInfo[];
-    triggerable? : boolean;
-    undeletable : boolean;
-    updateable : boolean;
-    urlDetail? : string;
-    urlEdit? : string;
-    urlNew? : string;
+    actionOverrides?: ActionOverride | ActionOverride[];
+    activateable: boolean;
+    associateEntityType?: string;
+    associateParentEntity?: string;
+    childRelationships?: ChildRelationship | ChildRelationship[];
+    compactLayoutable: boolean;
+    createable: boolean;
+    custom: boolean;
+    customSetting: boolean;
+    dataTranslationEnabled?: boolean;
+    deepCloneable: boolean;
+    defaultImplementation?: string;
+    deletable: boolean;
+    deprecatedAndHidden: boolean;
+    feedEnabled: boolean;
+    fields?: Field | Field[];
+    hasSubtypes: boolean;
+    idEnabled: boolean;
+    implementedBy?: string;
+    implementsInterfaces?: string;
+    isInterface: boolean;
+    isSubtype: boolean;
+    keyPrefix?: string;
+    label: string;
+    labelPlural: string;
+    layoutable: boolean;
+    listviewable?: boolean;
+    lookupLayoutable?: boolean;
+    mergeable: boolean;
+    mruEnabled: boolean;
+    name: string;
+    namedLayoutInfos?: NamedLayoutInfo | NamedLayoutInfo[];
+    networkScopeFieldName?: string;
+    queryable: boolean;
+    recordTypeInfos?: RecordTypeInfo | RecordTypeInfo[];
+    replicateable: boolean;
+    retrieveable: boolean;
+    searchLayoutable?: boolean;
+    searchable: boolean;
+    supportedScopes?: ScopeInfo | ScopeInfo[];
+    triggerable?: boolean;
+    undeletable: boolean;
+    updateable: boolean;
+    urlDetail?: string;
+    urlEdit?: string;
+    urlNew?: string;
 }
 
 export interface DescribePicklistResult {
-    defaultValue? : PicklistEntry;
-    multiSelectable : boolean;
-    picklistValues? : PicklistEntry | PicklistEntry[];
+    defaultValue?: PicklistEntry;
+    multiSelectable: boolean;
+    picklistValues?: PicklistEntry | PicklistEntry[];
 }
 
 export interface DescribePicklistsParam {
-    entityName : string;
-    fieldNames : string;
-    recordTypeId? : string;
+    entityName: string;
+    fieldNames: string;
+    recordTypeId?: string;
 }
 
 export interface DescribeGlobalSObjectResult {
-    activateable : boolean;
-    associateEntityType? : string;
-    associateParentEntity? : string;
-    createable : boolean;
-    custom : boolean;
-    customSetting : boolean;
-    dataTranslationEnabled? : boolean;
-    deepCloneable : boolean;
-    deletable : boolean;
-    deprecatedAndHidden : boolean;
-    feedEnabled : boolean;
-    hasSubtypes : boolean;
-    idEnabled : boolean;
-    isInterface : boolean;
-    isSubtype : boolean;
-    keyPrefix? : string;
-    label : string;
-    labelPlural : string;
-    layoutable : boolean;
-    mergeable : boolean;
-    mruEnabled : boolean;
-    name : string;
-    queryable : boolean;
-    replicateable : boolean;
-    retrieveable : boolean;
-    searchable : boolean;
-    triggerable : boolean;
-    undeletable : boolean;
-    updateable : boolean;
+    activateable: boolean;
+    associateEntityType?: string;
+    associateParentEntity?: string;
+    createable: boolean;
+    custom: boolean;
+    customSetting: boolean;
+    dataTranslationEnabled?: boolean;
+    deepCloneable: boolean;
+    deletable: boolean;
+    deprecatedAndHidden: boolean;
+    feedEnabled: boolean;
+    hasSubtypes: boolean;
+    idEnabled: boolean;
+    isInterface: boolean;
+    isSubtype: boolean;
+    keyPrefix?: string;
+    label: string;
+    labelPlural: string;
+    layoutable: boolean;
+    mergeable: boolean;
+    mruEnabled: boolean;
+    name: string;
+    queryable: boolean;
+    replicateable: boolean;
+    retrieveable: boolean;
+    searchable: boolean;
+    triggerable: boolean;
+    undeletable: boolean;
+    updateable: boolean;
 }
 
 export interface ChildRelationship {
-    cascadeDelete : boolean;
-    childSObject : string;
-    deprecatedAndHidden : boolean;
-    field : string;
-    junctionIdListNames? : string | string[];
-    junctionReferenceTo? : string | string[];
-    relationshipName? : string;
-    restrictedDelete? : boolean;
+    cascadeDelete: boolean;
+    childSObject: string;
+    deprecatedAndHidden: boolean;
+    field: string;
+    junctionIdListNames?: string | string[];
+    junctionReferenceTo?: string | string[];
+    relationshipName?: string;
+    restrictedDelete?: boolean;
 }
 
 export interface DescribeGlobalResult {
-    encoding? : string;
-    maxBatchSize : number;
-    sobjects? : DescribeGlobalSObjectResult | DescribeGlobalSObjectResult[];
+    encoding?: string;
+    maxBatchSize: number;
+    sobjects?: DescribeGlobalSObjectResult | DescribeGlobalSObjectResult[];
 }
 
 export interface DescribeGlobalTheme {
-    global : DescribeGlobalResult;
-    theme : DescribeThemeResult;
+    global: DescribeGlobalResult;
+    theme: DescribeThemeResult;
 }
 
 export interface DiscoverSchemasResult {
-    schemas? : Schema | Schema[];
+    schemas?: Schema | Schema[];
 }
 
 export interface Schema {
-    name : string;
+    name: string;
 }
 
 export interface DescribeSchemaResult {
-    fields? : SchemaField | SchemaField[];
-    keyPrefix? : string;
-    name : string;
+    fields?: SchemaField | SchemaField[];
+    keyPrefix?: string;
+    name: string;
 }
 
 export interface SchemaField {
-    digits : number;
-    length : number;
-    name : string;
-    nillable : boolean;
-    precision : number;
-    scale : number;
-    type : fieldType;
-    unique : boolean;
+    digits: number;
+    length: number;
+    name: string;
+    nillable: boolean;
+    precision: number;
+    scale: number;
+    type: fieldType;
+    unique: boolean;
 }
 
 export interface ScopeInfo {
-    label : string;
-    name : string;
+    label: string;
+    name: string;
 }
 
 export interface DurableIdList {
-    ids? : string | string[];
+    ids?: string | string[];
 }
 
 export interface StringList {
-    values? : string | string[];
+    values?: string | string[];
 }
 
 export interface ChangeEventHeader {
-    entityName : string;
-    recordIds : string | string[];
-    commitTimestamp : number;
-    commitNumber : number;
-    commitUser : string;
-    diffFields? : string | string[];
-    changeType : changeEventType;
-    changeOrigin : string;
-    transactionKey : string;
-    sequenceNumber : number;
-    nulledFields? : string | string[];
-    changedFields? : string | string[];
+    entityName: string;
+    recordIds: string | string[];
+    commitTimestamp: number;
+    commitNumber: number;
+    commitUser: string;
+    diffFields?: string | string[];
+    changeType: changeEventType;
+    changeOrigin: string;
+    transactionKey: string;
+    sequenceNumber: number;
+    nulledFields?: string | string[];
+    changedFields?: string | string[];
 }
 
 export interface FilteredLookupInfo {
-    controllingFields? : string | string[];
-    dependent : boolean;
-    optionalFilter : boolean;
+    controllingFields?: string | string[];
+    dependent: boolean;
+    optionalFilter: boolean;
 }
 
 export interface Field {
-    aggregatable : boolean;
-    aiPredictionField : boolean;
-    autoNumber : boolean;
-    byteLength : number;
-    calculated : boolean;
-    calculatedFormula? : string;
-    cascadeDelete? : boolean;
-    caseSensitive : boolean;
-    compoundFieldName? : string;
-    controllerName? : string;
-    createable : boolean;
-    custom : boolean;
-    dataTranslationEnabled? : boolean;
-    defaultValue? : any;
-    defaultValueFormula? : string;
-    defaultedOnCreate : boolean;
-    dependentPicklist? : boolean;
-    deprecatedAndHidden : boolean;
-    digits : number;
-    displayLocationInDecimal? : boolean;
-    encrypted? : boolean;
-    externalId? : boolean;
-    extraTypeInfo? : string;
-    filterable : boolean;
-    filteredLookupInfo? : FilteredLookupInfo;
-    formulaTreatNullNumberAsZero? : boolean;
-    groupable : boolean;
-    highScaleNumber? : boolean;
-    htmlFormatted? : boolean;
-    idLookup : boolean;
-    inlineHelpText? : string;
-    label : string;
-    length : number;
-    mask? : string;
-    maskType? : string;
-    name : string;
-    nameField : boolean;
-    namePointing? : boolean;
-    nillable : boolean;
-    permissionable : boolean;
-    picklistValues? : PicklistEntry | PicklistEntry[];
-    polymorphicForeignKey : boolean;
-    precision : number;
-    queryByDistance : boolean;
-    referenceTargetField? : string;
-    referenceTo? : string | string[];
-    relationshipName? : string;
-    relationshipOrder? : number;
-    restrictedDelete? : boolean;
-    restrictedPicklist : boolean;
-    scale : number;
-    searchPrefilterable : boolean;
-    soapType : soapType;
-    sortable? : boolean;
-    type : fieldType;
-    unique : boolean;
-    updateable : boolean;
-    writeRequiresMasterRead? : boolean;
+    aggregatable: boolean;
+    aiPredictionField: boolean;
+    autoNumber: boolean;
+    byteLength: number;
+    calculated: boolean;
+    calculatedFormula?: string;
+    cascadeDelete?: boolean;
+    caseSensitive: boolean;
+    compoundFieldName?: string;
+    controllerName?: string;
+    createable: boolean;
+    custom: boolean;
+    dataTranslationEnabled?: boolean;
+    defaultValue?: any;
+    defaultValueFormula?: string;
+    defaultedOnCreate: boolean;
+    dependentPicklist?: boolean;
+    deprecatedAndHidden: boolean;
+    digits: number;
+    displayLocationInDecimal?: boolean;
+    encrypted?: boolean;
+    externalId?: boolean;
+    extraTypeInfo?: string;
+    filterable: boolean;
+    filteredLookupInfo?: FilteredLookupInfo;
+    formulaTreatNullNumberAsZero?: boolean;
+    groupable: boolean;
+    highScaleNumber?: boolean;
+    htmlFormatted?: boolean;
+    idLookup: boolean;
+    inlineHelpText?: string;
+    label: string;
+    length: number;
+    mask?: string;
+    maskType?: string;
+    name: string;
+    nameField: boolean;
+    namePointing?: boolean;
+    nillable: boolean;
+    permissionable: boolean;
+    picklistValues?: PicklistEntry | PicklistEntry[];
+    polymorphicForeignKey: boolean;
+    precision: number;
+    queryByDistance: boolean;
+    referenceTargetField?: string;
+    referenceTo?: string | string[];
+    relationshipName?: string;
+    relationshipOrder?: number;
+    restrictedDelete?: boolean;
+    restrictedPicklist: boolean;
+    scale: number;
+    searchPrefilterable: boolean;
+    soapType: soapType;
+    sortable?: boolean;
+    type: fieldType;
+    unique: boolean;
+    updateable: boolean;
+    writeRequiresMasterRead?: boolean;
 }
 
 export interface PicklistEntry {
-    active : boolean;
-    defaultValue : boolean;
-    label? : string;
-    validFor? : string;
-    value : string;
+    active: boolean;
+    defaultValue: boolean;
+    label?: string;
+    validFor?: string;
+    value: string;
 }
 
 export interface DescribeDataCategoryGroupResult {
-    categoryCount : number;
-    description : string;
-    label : string;
-    name : string;
-    sobject : string;
+    categoryCount: number;
+    description: string;
+    label: string;
+    name: string;
+    sobject: string;
 }
 
 export interface DescribeDataCategoryGroupStructureResult {
-    description : string;
-    label : string;
-    name : string;
-    sobject : string;
-    topCategories? : DataCategory | DataCategory[];
+    description: string;
+    label: string;
+    name: string;
+    sobject: string;
+    topCategories?: DataCategory | DataCategory[];
 }
 
 export interface DataCategoryGroupSobjectTypePair {
-    dataCategoryGroupName : string;
-    sobject : string;
+    dataCategoryGroupName: string;
+    sobject: string;
 }
 
 export interface DataCategory {
-    childCategories? : DataCategory | DataCategory[];
-    label : string;
-    name : string;
+    childCategories?: DataCategory | DataCategory[];
+    label: string;
+    name: string;
 }
 
 export interface DescribeDataCategoryMappingResult {
-    dataCategoryGroupId : string;
-    dataCategoryGroupLabel : string;
-    dataCategoryGroupName : string;
-    dataCategoryId : string;
-    dataCategoryLabel : string;
-    dataCategoryName : string;
-    id : string;
-    mappedEntity : string;
-    mappedField : string;
+    dataCategoryGroupId: string;
+    dataCategoryGroupLabel: string;
+    dataCategoryGroupName: string;
+    dataCategoryId: string;
+    dataCategoryLabel: string;
+    dataCategoryName: string;
+    id: string;
+    mappedEntity: string;
+    mappedField: string;
 }
 
 export interface CommonEventResult {
-    success : boolean;
+    success: boolean;
 }
 
 export interface KnowledgeSettings {
-    defaultLanguage? : string;
-    knowledgeEnabled : boolean;
-    languages? : KnowledgeLanguageItem | KnowledgeLanguageItem[];
+    defaultLanguage?: string;
+    knowledgeEnabled: boolean;
+    languages?: KnowledgeLanguageItem | KnowledgeLanguageItem[];
 }
 
 export interface KnowledgeLanguageItem {
-    active : boolean;
-    assigneeId? : string;
-    name : string;
+    active: boolean;
+    assigneeId?: string;
+    name: string;
 }
 
 export interface FieldDiff {
-    difference : differenceType;
-    name : string;
+    difference: differenceType;
+    name: string;
 }
 
 export interface AdditionalInformationMap {
-    name : string;
-    value : string;
+    name: string;
+    value: string;
 }
 
 export interface MatchRecord {
-    additionalInformation? : AdditionalInformationMap | AdditionalInformationMap[];
-    fieldDiffs? : FieldDiff | FieldDiff[];
-    matchConfidence : number;
-    record : sObject;
+    additionalInformation?: AdditionalInformationMap | AdditionalInformationMap[];
+    fieldDiffs?: FieldDiff | FieldDiff[];
+    matchConfidence: number;
+    record: sObject;
 }
 
 export interface MatchResult {
-    entityType : string;
-    errors? : Error | Error[];
-    matchEngine : string;
-    matchRecords? : MatchRecord | MatchRecord[];
-    rule : string;
-    size : number;
-    success : boolean;
+    entityType: string;
+    errors?: Error | Error[];
+    matchEngine: string;
+    matchRecords?: MatchRecord | MatchRecord[];
+    rule: string;
+    size: number;
+    success: boolean;
 }
 
 export interface DuplicateResult {
-    allowSave : boolean;
-    duplicateRule : string;
-    duplicateRuleEntityType : string;
-    errorMessage? : string;
-    matchResults? : MatchResult | MatchResult[];
+    allowSave: boolean;
+    duplicateRule: string;
+    duplicateRuleEntityType: string;
+    errorMessage?: string;
+    matchResults?: MatchResult | MatchResult[];
 }
 
 export interface DuplicateError extends Error {
-    duplicateResult : DuplicateResult;
+    duplicateResult: DuplicateResult;
 }
 
 export interface DescribeNounResult {
-    caseValues? : NameCaseValue | NameCaseValue[];
-    developerName : string;
-    gender? : Gender;
-    name : string;
-    pluralAlias? : string;
-    startsWith? : StartsWith;
+    caseValues?: NameCaseValue | NameCaseValue[];
+    developerName: string;
+    gender?: Gender;
+    name: string;
+    pluralAlias?: string;
+    startsWith?: StartsWith;
 }
 
 export interface NameCaseValue {
-    article? : Article;
-    caseType? : CaseType;
-    number? : GrammaticalNumber;
-    possessive? : Possessive;
-    value? : string;
+    article?: Article;
+    caseType?: CaseType;
+    number?: GrammaticalNumber;
+    possessive?: Possessive;
+    value?: string;
 }
 
 export interface ObjectMapping {
-    inputObject : string;
-    objectMappingFields? : ObjectMappingField | ObjectMappingField[];
-    outputObject : string;
+    inputObject: string;
+    objectMappingFields?: ObjectMappingField | ObjectMappingField[];
+    outputObject: string;
 }
 
 export interface ObjectMappingField {
-    inputField : string;
-    inputLookupObject? : string;
-    outputField : string;
-    outputLookupObject? : string;
+    inputField: string;
+    inputLookupObject?: string;
+    outputField: string;
+    outputLookupObject?: string;
 }
 
 export interface DescribeDuplicateRuleResult {
-    actionOnInsert : DuplicateActionType;
-    actionOnUpdate : DuplicateActionType;
-    active : boolean;
-    alertMessage? : string;
-    developerName : string;
-    duplicateFilters? : DuplicateRuleFilter | DuplicateRuleFilter[];
-    duplicateRuleMatchInfos? : DuplicateRuleMatchInfo | DuplicateRuleMatchInfo[];
-    name : string;
-    operationsOnInsert? : string | string[];
-    operationsOnUpdate? : string | string[];
-    securityOption : DuplicateSecurityOptionType;
-    sortOrder : number;
+    actionOnInsert: DuplicateActionType;
+    actionOnUpdate: DuplicateActionType;
+    active: boolean;
+    alertMessage?: string;
+    developerName: string;
+    duplicateFilters?: DuplicateRuleFilter | DuplicateRuleFilter[];
+    duplicateRuleMatchInfos?: DuplicateRuleMatchInfo | DuplicateRuleMatchInfo[];
+    name: string;
+    operationsOnInsert?: string | string[];
+    operationsOnUpdate?: string | string[];
+    securityOption: DuplicateSecurityOptionType;
+    sortOrder: number;
 }
 
 export interface DuplicateRuleFilter {
-    booleanFilter : string;
-    filterItems? : DuplicateRuleFilterItem | DuplicateRuleFilterItem[];
-    ruleCritera : string;
+    booleanFilter: string;
+    filterItems?: DuplicateRuleFilterItem | DuplicateRuleFilterItem[];
+    ruleCritera: string;
 }
 
 export interface DuplicateRuleFilterItem {
-    field : string;
-    operation : string;
-    sortOrder : number;
-    value : string;
+    field: string;
+    operation: string;
+    sortOrder: number;
+    value: string;
 }
 
 export interface DuplicateRuleMatchInfo {
-    entityType : string;
-    mapped : boolean;
-    matchEngine : string;
-    matchFields? : string | string[];
-    matchRuleName : string;
-    objectMapping? : ObjectMapping;
+    entityType: string;
+    mapped: boolean;
+    matchEngine: string;
+    matchFields?: string | string[];
+    matchRuleName: string;
+    objectMapping?: ObjectMapping;
 }
 
 export interface FindDuplicatesResult {
-    duplicateResults? : DuplicateResult | DuplicateResult[];
-    errors? : Error | Error[];
-    success : boolean;
+    duplicateResults?: DuplicateResult | DuplicateResult[];
+    errors?: Error | Error[];
+    success: boolean;
 }
 
 export interface DescribeFlexiPageResult {
-    id : ID;
-    label : string;
-    name : string;
-    quickActionList? : DescribeQuickActionListResult;
-    regions? : DescribeFlexiPageRegion | DescribeFlexiPageRegion[];
-    sobjectType? : string;
-    template? : string;
-    type : string;
+    id: ID;
+    label: string;
+    name: string;
+    quickActionList?: DescribeQuickActionListResult;
+    regions?: DescribeFlexiPageRegion | DescribeFlexiPageRegion[];
+    sobjectType?: string;
+    template?: string;
+    type: string;
 }
 
 export interface DescribeFlexiPageRegion {
-    components? : DescribeComponentInstance | DescribeComponentInstance[];
-    name : string;
+    components?: DescribeComponentInstance | DescribeComponentInstance[];
+    name: string;
 }
 
 export interface DescribeComponentInstance {
-    properties? : DescribeComponentInstanceProperty | DescribeComponentInstanceProperty[];
-    typeName : string;
-    typeNamespace : string;
+    properties?: DescribeComponentInstanceProperty | DescribeComponentInstanceProperty[];
+    typeName: string;
+    typeNamespace: string;
 }
 
 export interface DescribeComponentInstanceProperty {
-    name : string;
-    region? : DescribeFlexiPageRegion;
-    type? : ComponentInstancePropertyTypeEnum;
-    value? : string;
+    name: string;
+    region?: DescribeFlexiPageRegion;
+    type?: ComponentInstancePropertyTypeEnum;
+    value?: string;
 }
 
 export interface FlexipageContext {
-    type : FlexipageContextTypeEnum;
-    value : string;
+    type: FlexipageContextTypeEnum;
+    value: string;
 }
 
 export interface DescribeAppMenuResult {
-    appMenuItems? : DescribeAppMenuItem | DescribeAppMenuItem[];
+    appMenuItems?: DescribeAppMenuItem | DescribeAppMenuItem[];
 }
 
 export interface DescribeAppMenuItem {
-    colors? : DescribeColor | DescribeColor[];
-    content : string;
-    icons? : DescribeIcon | DescribeIcon[];
-    label : string;
-    name : string;
-    type : string;
-    url : string;
+    colors?: DescribeColor | DescribeColor[];
+    content: string;
+    icons?: DescribeIcon | DescribeIcon[];
+    label: string;
+    name: string;
+    type: string;
+    url: string;
 }
 
 export interface DescribeThemeResult {
-    themeItems? : DescribeThemeItem | DescribeThemeItem[];
+    themeItems?: DescribeThemeItem | DescribeThemeItem[];
 }
 
 export interface DescribeThemeItem {
-    colors? : DescribeColor | DescribeColor[];
-    icons? : DescribeIcon | DescribeIcon[];
-    name : string;
+    colors?: DescribeColor | DescribeColor[];
+    icons?: DescribeIcon | DescribeIcon[];
+    name: string;
 }
 
 export interface DescribeSoftphoneLayoutResult {
-    callTypes : DescribeSoftphoneLayoutCallType | DescribeSoftphoneLayoutCallType[];
-    id : ID;
-    name : string;
+    callTypes: DescribeSoftphoneLayoutCallType | DescribeSoftphoneLayoutCallType[];
+    id: ID;
+    name: string;
 }
 
 export interface DescribeSoftphoneLayoutCallType {
-    infoFields : DescribeSoftphoneLayoutInfoField | DescribeSoftphoneLayoutInfoField[];
-    name : string;
-    screenPopOptions? : DescribeSoftphoneScreenPopOption | DescribeSoftphoneScreenPopOption[];
-    screenPopsOpenWithin? : string;
-    sections? : DescribeSoftphoneLayoutSection | DescribeSoftphoneLayoutSection[];
+    infoFields: DescribeSoftphoneLayoutInfoField | DescribeSoftphoneLayoutInfoField[];
+    name: string;
+    screenPopOptions?: DescribeSoftphoneScreenPopOption | DescribeSoftphoneScreenPopOption[];
+    screenPopsOpenWithin?: string;
+    sections?: DescribeSoftphoneLayoutSection | DescribeSoftphoneLayoutSection[];
 }
 
 export interface DescribeSoftphoneScreenPopOption {
-    matchType : string;
-    screenPopData : string;
-    screenPopType : string;
+    matchType: string;
+    screenPopData: string;
+    screenPopType: string;
 }
 
 export interface DescribeSoftphoneLayoutInfoField {
-    name : string;
+    name: string;
 }
 
 export interface DescribeSoftphoneLayoutSection {
-    entityApiName : string;
-    items : DescribeSoftphoneLayoutItem | DescribeSoftphoneLayoutItem[];
+    entityApiName: string;
+    items: DescribeSoftphoneLayoutItem | DescribeSoftphoneLayoutItem[];
 }
 
 export interface DescribeSoftphoneLayoutItem {
-    itemApiName : string;
+    itemApiName: string;
 }
 
 export interface DescribeCompactLayoutsResult {
-    compactLayouts : DescribeCompactLayout | DescribeCompactLayout[];
-    defaultCompactLayoutId : ID;
-    recordTypeCompactLayoutMappings? : RecordTypeCompactLayoutMapping | RecordTypeCompactLayoutMapping[];
+    compactLayouts: DescribeCompactLayout | DescribeCompactLayout[];
+    defaultCompactLayoutId: ID;
+    recordTypeCompactLayoutMappings?: RecordTypeCompactLayoutMapping | RecordTypeCompactLayoutMapping[];
 }
 
 export interface DescribeCompactLayout {
-    actions? : DescribeLayoutButton | DescribeLayoutButton[];
-    fieldItems? : DescribeLayoutItem | DescribeLayoutItem[];
-    id : ID;
-    imageItems? : DescribeLayoutItem | DescribeLayoutItem[];
-    label : string;
-    name : string;
-    objectType : string;
+    actions?: DescribeLayoutButton | DescribeLayoutButton[];
+    fieldItems?: DescribeLayoutItem | DescribeLayoutItem[];
+    id: ID;
+    imageItems?: DescribeLayoutItem | DescribeLayoutItem[];
+    label: string;
+    name: string;
+    objectType: string;
 }
 
 export interface RecordTypeCompactLayoutMapping {
-    available : boolean;
-    compactLayoutId? : ID;
-    compactLayoutName : string;
-    recordTypeId : ID;
-    recordTypeName : string;
+    available: boolean;
+    compactLayoutId?: ID;
+    compactLayoutName: string;
+    recordTypeId: ID;
+    recordTypeName: string;
 }
 
 export interface DescribePathAssistantsResult {
-    pathAssistants? : DescribePathAssistant | DescribePathAssistant[];
+    pathAssistants?: DescribePathAssistant | DescribePathAssistant[];
 }
 
 export interface DescribePathAssistant {
-    active : boolean;
-    animationRule? : DescribeAnimationRule | DescribeAnimationRule[];
-    apiName : string;
-    label : string;
-    pathPicklistField : string;
-    picklistsForRecordType? : PicklistForRecordType | PicklistForRecordType[];
-    recordTypeId? : ID;
-    steps? : DescribePathAssistantStep | DescribePathAssistantStep[];
+    active: boolean;
+    animationRule?: DescribeAnimationRule | DescribeAnimationRule[];
+    apiName: string;
+    label: string;
+    pathPicklistField: string;
+    picklistsForRecordType?: PicklistForRecordType | PicklistForRecordType[];
+    recordTypeId?: ID;
+    steps?: DescribePathAssistantStep | DescribePathAssistantStep[];
 }
 
 export interface DescribePathAssistantStep {
-    closed : boolean;
-    converted : boolean;
-    fields? : DescribePathAssistantField | DescribePathAssistantField[];
-    info? : string;
-    layoutSection? : DescribeLayoutSection;
-    picklistLabel : string;
-    picklistValue : string;
-    won : boolean;
+    closed: boolean;
+    converted: boolean;
+    fields?: DescribePathAssistantField | DescribePathAssistantField[];
+    info?: string;
+    layoutSection?: DescribeLayoutSection;
+    picklistLabel: string;
+    picklistValue: string;
+    won: boolean;
 }
 
 export interface DescribePathAssistantField {
-    apiName : string;
-    label : string;
-    readOnly : boolean;
-    required : boolean;
+    apiName: string;
+    label: string;
+    readOnly: boolean;
+    required: boolean;
 }
 
 export interface DescribeAnimationRule {
-    animationFrequency : string;
-    isActive : boolean;
-    recordTypeContext : string;
-    recordTypeId? : string;
-    targetField : string;
-    targetFieldChangeToValues : string;
+    animationFrequency: string;
+    isActive: boolean;
+    recordTypeContext: string;
+    recordTypeId?: string;
+    targetField: string;
+    targetFieldChangeToValues: string;
 }
 
 export interface DescribeApprovalLayoutResult {
-    approvalLayouts? : DescribeApprovalLayout | DescribeApprovalLayout[];
+    approvalLayouts?: DescribeApprovalLayout | DescribeApprovalLayout[];
 }
 
 export interface DescribeApprovalLayout {
-    id : ID;
-    label : string;
-    layoutItems : DescribeLayoutItem | DescribeLayoutItem[];
-    name : string;
+    id: ID;
+    label: string;
+    layoutItems: DescribeLayoutItem | DescribeLayoutItem[];
+    name: string;
 }
 
 export interface DescribeLayoutResult {
-    layouts : DescribeLayout | DescribeLayout[];
-    recordTypeMappings? : RecordTypeMapping | RecordTypeMapping[];
-    recordTypeSelectorRequired : boolean;
+    layouts: DescribeLayout | DescribeLayout[];
+    recordTypeMappings?: RecordTypeMapping | RecordTypeMapping[];
+    recordTypeSelectorRequired: boolean;
 }
 
 export interface DescribeLayout {
-    buttonLayoutSection? : DescribeLayoutButtonSection;
-    detailLayoutSections? : DescribeLayoutSection | DescribeLayoutSection[];
-    editLayoutSections? : DescribeLayoutSection | DescribeLayoutSection[];
-    feedView? : DescribeLayoutFeedView;
-    highlightsPanelLayoutSection? : DescribeLayoutSection;
-    id? : ID;
-    multirowEditLayoutSections? : DescribeLayoutSection | DescribeLayoutSection[];
-    offlineLinks? : OfflineLink | OfflineLink[];
-    quickActionList? : DescribeQuickActionListResult;
-    relatedContent? : RelatedContent;
-    relatedLists? : RelatedList | RelatedList[];
-    saveOptions? : DescribeLayoutSaveOption | DescribeLayoutSaveOption[];
+    buttonLayoutSection?: DescribeLayoutButtonSection;
+    detailLayoutSections?: DescribeLayoutSection | DescribeLayoutSection[];
+    editLayoutSections?: DescribeLayoutSection | DescribeLayoutSection[];
+    feedView?: DescribeLayoutFeedView;
+    highlightsPanelLayoutSection?: DescribeLayoutSection;
+    id?: ID;
+    multirowEditLayoutSections?: DescribeLayoutSection | DescribeLayoutSection[];
+    offlineLinks?: OfflineLink | OfflineLink[];
+    quickActionList?: DescribeQuickActionListResult;
+    relatedContent?: RelatedContent;
+    relatedLists?: RelatedList | RelatedList[];
+    saveOptions?: DescribeLayoutSaveOption | DescribeLayoutSaveOption[];
 }
 
 export interface DescribeMiniLayoutResult {
-    layouts : DescribeLayout | DescribeLayout[];
-    recordTypeMappings? : RecordTypeMapping | RecordTypeMapping[];
-    recordTypeSelectorRequired : boolean;
+    layouts: DescribeLayout | DescribeLayout[];
+    recordTypeMappings?: RecordTypeMapping | RecordTypeMapping[];
+    recordTypeSelectorRequired: boolean;
 }
 
 export interface DescribeQuickActionListResult {
-    quickActionListItems? : DescribeQuickActionListItemResult | DescribeQuickActionListItemResult[];
+    quickActionListItems?: DescribeQuickActionListItemResult | DescribeQuickActionListItemResult[];
 }
 
 export interface DescribeQuickActionListItemResult {
-    accessLevelRequired? : ShareAccessLevel;
-    colors? : DescribeColor | DescribeColor[];
-    iconUrl? : string;
-    icons? : DescribeIcon | DescribeIcon[];
-    label : string;
-    miniIconUrl : string;
-    quickActionName : string;
-    targetSobjectType? : string;
-    type : string;
+    accessLevelRequired?: ShareAccessLevel;
+    colors?: DescribeColor | DescribeColor[];
+    iconUrl?: string;
+    icons?: DescribeIcon | DescribeIcon[];
+    label: string;
+    miniIconUrl: string;
+    quickActionName: string;
+    targetSobjectType?: string;
+    type: string;
 }
 
 export interface DescribeLayoutFeedView {
-    feedFilters? : DescribeLayoutFeedFilter | DescribeLayoutFeedFilter[];
+    feedFilters?: DescribeLayoutFeedFilter | DescribeLayoutFeedFilter[];
 }
 
 export interface DescribeLayoutFeedFilter {
-    label : string;
-    name : string;
-    type : FeedLayoutFilterType;
+    label: string;
+    name: string;
+    type: FeedLayoutFilterType;
 }
 
 export interface DescribeLayoutSaveOption {
-    defaultValue : boolean;
-    isDisplayed : boolean;
-    label : string;
-    name : string;
-    restHeaderName : string;
-    soapHeaderName : string;
+    defaultValue: boolean;
+    isDisplayed: boolean;
+    label: string;
+    name: string;
+    restHeaderName: string;
+    soapHeaderName: string;
 }
 
 export interface DescribeLayoutSection {
-    collapsed : boolean;
-    columns : number;
-    heading? : string;
-    layoutRows : DescribeLayoutRow | DescribeLayoutRow[];
-    layoutSectionId? : ID;
-    parentLayoutId : ID;
-    rows : number;
-    tabOrder : TabOrderType;
-    useCollapsibleSection : boolean;
-    useHeading : boolean;
+    collapsed: boolean;
+    columns: number;
+    heading?: string;
+    layoutRows: DescribeLayoutRow | DescribeLayoutRow[];
+    layoutSectionId?: ID;
+    parentLayoutId: ID;
+    rows: number;
+    tabOrder: TabOrderType;
+    useCollapsibleSection: boolean;
+    useHeading: boolean;
 }
 
 export interface DescribeLayoutButtonSection {
-    detailButtons : DescribeLayoutButton | DescribeLayoutButton[];
+    detailButtons: DescribeLayoutButton | DescribeLayoutButton[];
 }
 
 export interface DescribeLayoutRow {
-    layoutItems : DescribeLayoutItem | DescribeLayoutItem[];
-    numItems : number;
+    layoutItems: DescribeLayoutItem | DescribeLayoutItem[];
+    numItems: number;
 }
 
 export interface DescribeLayoutItem {
-    editableForNew : boolean;
-    editableForUpdate : boolean;
-    label? : string;
-    layoutComponents? : DescribeLayoutComponent | DescribeLayoutComponent[];
-    placeholder : boolean;
-    required : boolean;
+    editableForNew: boolean;
+    editableForUpdate: boolean;
+    label?: string;
+    layoutComponents?: DescribeLayoutComponent | DescribeLayoutComponent[];
+    placeholder: boolean;
+    required: boolean;
 }
 
 export interface DescribeLayoutButton {
-    behavior? : WebLinkWindowType;
-    colors? : DescribeColor | DescribeColor[];
-    content? : string;
-    contentSource? : WebLinkType;
-    custom : boolean;
-    encoding? : string;
-    height? : number;
-    icons? : DescribeIcon | DescribeIcon[];
-    label? : string;
-    menubar? : boolean;
-    name? : string;
-    overridden : boolean;
-    resizeable? : boolean;
-    scrollbars? : boolean;
-    showsLocation? : boolean;
-    showsStatus? : boolean;
-    toolbar? : boolean;
-    url? : string;
-    width? : number;
-    windowPosition? : WebLinkPosition;
+    behavior?: WebLinkWindowType;
+    colors?: DescribeColor | DescribeColor[];
+    content?: string;
+    contentSource?: WebLinkType;
+    custom: boolean;
+    encoding?: string;
+    height?: number;
+    icons?: DescribeIcon | DescribeIcon[];
+    label?: string;
+    menubar?: boolean;
+    name?: string;
+    overridden: boolean;
+    resizeable?: boolean;
+    scrollbars?: boolean;
+    showsLocation?: boolean;
+    showsStatus?: boolean;
+    toolbar?: boolean;
+    url?: string;
+    width?: number;
+    windowPosition?: WebLinkPosition;
 }
 
 export interface DescribeLayoutComponent {
-    displayLines : number;
-    tabOrder : number;
-    type : layoutComponentType;
-    value? : string;
+    displayLines: number;
+    tabOrder: number;
+    type: layoutComponentType;
+    value?: string;
 }
 
 export interface FieldComponent extends DescribeLayoutComponent {
-    field : Field;
+    field: Field;
 }
 
 export interface FieldLayoutComponent extends DescribeLayoutComponent {
-    components? : DescribeLayoutComponent | DescribeLayoutComponent[];
-    fieldType : fieldType;
+    components?: DescribeLayoutComponent | DescribeLayoutComponent[];
+    fieldType: fieldType;
 }
 
 export interface VisualforcePage extends DescribeLayoutComponent {
-    showLabel : boolean;
-    showScrollbars : boolean;
-    suggestedHeight : string;
-    suggestedWidth : string;
-    url : string;
+    showLabel: boolean;
+    showScrollbars: boolean;
+    suggestedHeight: string;
+    suggestedWidth: string;
+    url: string;
 }
 
 export interface Canvas extends DescribeLayoutComponent {
-    displayLocation : string;
-    referenceId : string;
-    showLabel : boolean;
-    showScrollbars : boolean;
-    suggestedHeight : string;
-    suggestedWidth : string;
+    displayLocation: string;
+    referenceId: string;
+    showLabel: boolean;
+    showScrollbars: boolean;
+    suggestedHeight: string;
+    suggestedWidth: string;
 }
 
 export interface ReportChartComponent extends DescribeLayoutComponent {
-    cacheData : boolean;
-    contextFilterableField : string;
-    error : string;
-    hideOnError : boolean;
-    includeContext : boolean;
-    showTitle : boolean;
-    size : ReportChartSize;
+    cacheData: boolean;
+    contextFilterableField: string;
+    error: string;
+    hideOnError: boolean;
+    includeContext: boolean;
+    showTitle: boolean;
+    size: ReportChartSize;
 }
 
 export interface AnalyticsCloudComponent extends DescribeLayoutComponent {
-    error : string;
-    filter : string;
-    height : string;
-    hideOnError : boolean;
-    showSharing : boolean;
-    showTitle : boolean;
-    width : string;
+    error: string;
+    filter: string;
+    height: string;
+    hideOnError: boolean;
+    showSharing: boolean;
+    showTitle: boolean;
+    width: string;
 }
 
 export interface FieldCriteria {
-    criteria? : FieldCriterion | FieldCriterion[];
+    criteria?: FieldCriterion | FieldCriterion[];
 }
 
 export interface FieldCriterion {
-    columnName : string;
-    operand : string;
-    operator : string;
+    columnName: string;
+    operand: string;
+    operator: string;
 }
 
 export interface CustomLinkComponent extends DescribeLayoutComponent {
-    customLink : DescribeLayoutButton;
+    customLink: DescribeLayoutButton;
 }
 
 export interface NamedLayoutInfo {
-    name : string;
+    name: string;
 }
 
 export interface RecordTypeInfo {
-    active : boolean;
-    available : boolean;
-    defaultRecordTypeMapping : boolean;
-    developerName : string;
-    master : boolean;
-    name : string;
-    recordTypeId? : ID;
+    active: boolean;
+    available: boolean;
+    defaultRecordTypeMapping: boolean;
+    developerName: string;
+    master: boolean;
+    name: string;
+    recordTypeId?: ID;
 }
 
 export interface RecordTypeMapping {
-    active : boolean;
-    available : boolean;
-    defaultRecordTypeMapping : boolean;
-    developerName : string;
-    layoutId : ID;
-    master : boolean;
-    name : string;
-    picklistsForRecordType? : PicklistForRecordType | PicklistForRecordType[];
-    recordTypeId? : ID;
+    active: boolean;
+    available: boolean;
+    defaultRecordTypeMapping: boolean;
+    developerName: string;
+    layoutId: ID;
+    master: boolean;
+    name: string;
+    picklistsForRecordType?: PicklistForRecordType | PicklistForRecordType[];
+    recordTypeId?: ID;
 }
 
 export interface PicklistForRecordType {
-    picklistName : string;
-    picklistValues? : PicklistEntry | PicklistEntry[];
+    picklistName: string;
+    picklistValues?: PicklistEntry | PicklistEntry[];
 }
 
 export interface RelatedContent {
-    relatedContentItems : DescribeRelatedContentItem | DescribeRelatedContentItem[];
+    relatedContentItems: DescribeRelatedContentItem | DescribeRelatedContentItem[];
 }
 
 export interface DescribeRelatedContentItem {
-    describeLayoutItem : DescribeLayoutItem;
+    describeLayoutItem: DescribeLayoutItem;
 }
 
 export interface RelatedList {
-    accessLevelRequiredForCreate? : ShareAccessLevel;
-    buttons? : DescribeLayoutButton | DescribeLayoutButton[];
-    columns : RelatedListColumn | RelatedListColumn[];
-    custom : boolean;
-    field? : string;
-    label : string;
-    limitRows : number;
-    name : string;
-    sobject? : string;
-    sort? : RelatedListSort | RelatedListSort[];
+    accessLevelRequiredForCreate?: ShareAccessLevel;
+    buttons?: DescribeLayoutButton | DescribeLayoutButton[];
+    columns: RelatedListColumn | RelatedListColumn[];
+    custom: boolean;
+    field?: string;
+    label: string;
+    limitRows: number;
+    name: string;
+    sobject?: string;
+    sort?: RelatedListSort | RelatedListSort[];
 }
 
 export interface RelatedListColumn {
-    field? : string;
-    fieldApiName : string;
-    format? : string;
-    label : string;
-    lookupId? : string;
-    name : string;
-    sortable : boolean;
+    field?: string;
+    fieldApiName: string;
+    format?: string;
+    label: string;
+    lookupId?: string;
+    name: string;
+    sortable: boolean;
 }
 
 export interface RelatedListSort {
-    ascending : boolean;
-    column : string;
+    ascending: boolean;
+    column: string;
 }
 
 export interface OfflineLink {
-    name : string;
-    openType : string;
-    position : string;
-    properties : string;
-    url : string;
-    x : number;
-    y : number;
+    name: string;
+    openType: string;
+    position: string;
+    properties: string;
+    url: string;
+    x: number;
+    y: number;
 }
 
 export interface EmailAttachment {
-    body? : string;
-    contentId? : string;
-    contentType : string;
-    fileName : string;
+    body?: string;
+    contentId?: string;
+    contentType: string;
+    fileName: string;
 }
 
 export interface HandledEmailMessage {
-    attachments? : EmailAttachment | EmailAttachment[];
-    headers? : NameValuePair | NameValuePair[];
-    htmlBody : string;
-    subject : string;
-    textBody : string;
+    attachments?: EmailAttachment | EmailAttachment[];
+    headers?: NameValuePair | NameValuePair[];
+    htmlBody: string;
+    subject: string;
+    textBody: string;
 }
 
 export interface EmailFileAttachment {
-    body? : string;
-    contentType? : string;
-    fileName : string;
-    id? : ID;
-    inline? : boolean;
+    body?: string;
+    contentType?: string;
+    fileName: string;
+    id?: ID;
+    inline?: boolean;
 }
 
 export interface Email {
-    bccSender? : boolean;
-    emailPriority? : EmailPriority;
-    replyTo? : string;
-    saveAsActivity? : boolean;
-    senderDisplayName? : string;
-    subject? : string;
-    useSignature? : boolean;
+    bccSender?: boolean;
+    emailPriority?: EmailPriority;
+    replyTo?: string;
+    saveAsActivity?: boolean;
+    senderDisplayName?: string;
+    subject?: string;
+    useSignature?: boolean;
 }
 
 export interface MassEmailMessage extends Email {
-    description? : string;
-    targetObjectIds? : ID;
-    templateId : ID;
-    whatIds? : ID;
+    description?: string;
+    targetObjectIds?: ID;
+    templateId: ID;
+    whatIds?: ID;
 }
 
 export interface SingleEmailMessage extends Email {
-    bccAddresses? : string;
-    ccAddresses? : string;
-    charset? : string;
-    documentAttachments? : ID | ID[];
-    entityAttachments? : ID | ID[];
-    fileAttachments? : EmailFileAttachment | EmailFileAttachment[];
-    htmlBody? : string;
-    inReplyTo? : string;
-    optOutPolicy? : SendEmailOptOutPolicy;
-    orgWideEmailAddressId? : ID;
-    plainTextBody? : string;
-    references? : string;
-    targetObjectId? : ID;
-    templateId? : ID;
-    templateName? : string;
-    toAddresses? : string;
-    treatBodiesAsTemplate? : boolean;
-    treatTargetObjectAsRecipient? : boolean;
-    whatId? : ID;
+    bccAddresses?: string;
+    ccAddresses?: string;
+    charset?: string;
+    documentAttachments?: ID | ID[];
+    entityAttachments?: ID | ID[];
+    fileAttachments?: EmailFileAttachment | EmailFileAttachment[];
+    htmlBody?: string;
+    inReplyTo?: string;
+    optOutPolicy?: SendEmailOptOutPolicy;
+    orgWideEmailAddressId?: ID;
+    plainTextBody?: string;
+    references?: string;
+    targetObjectId?: ID;
+    templateId?: ID;
+    templateName?: string;
+    toAddresses?: string;
+    treatBodiesAsTemplate?: boolean;
+    treatTargetObjectAsRecipient?: boolean;
+    whatId?: ID;
 }
 
 export interface SendEmailResult {
-    errors? : SendEmailError | SendEmailError[];
-    success : boolean;
+    errors?: SendEmailError | SendEmailError[];
+    success: boolean;
 }
 
 export interface DescribeListViewResult {
-    listViews? : DescribeListView | DescribeListView[];
+    listViews?: DescribeListView | DescribeListView[];
 }
 
 export interface DescribeListView {
-    filterLanguage? : string;
-    id : ID;
-    limitRows : number;
-    listViewAdvancedFilter? : string;
-    listViewColumns? : DescribeColumn | DescribeColumn[];
-    listViewFilters? : DescribeFilter | DescribeFilter[];
-    listViewName : string;
-    listViewScopeFilters? : DescribeFilter | DescribeFilter[];
-    relatedEntityId? : ID;
-    scope? : queryOptionsScope;
-    scopeEntityId? : ID;
-    sobjectName? : string;
+    filterLanguage?: string;
+    id: ID;
+    limitRows: number;
+    listViewAdvancedFilter?: string;
+    listViewColumns?: DescribeColumn | DescribeColumn[];
+    listViewFilters?: DescribeFilter | DescribeFilter[];
+    listViewName: string;
+    listViewScopeFilters?: DescribeFilter | DescribeFilter[];
+    relatedEntityId?: ID;
+    scope?: queryOptionsScope;
+    scopeEntityId?: ID;
+    sobjectName?: string;
 }
 
 export interface DescribeFilter {
-    column : string;
-    negated : boolean;
-    operator : string;
-    value? : string | string[];
-    valueSeparator : string;
+    column: string;
+    negated: boolean;
+    operator: string;
+    value?: string | string[];
+    valueSeparator: string;
 }
 
 export interface DescribeColumn {
-    field : string;
-    format? : string;
-    label : string;
-    name : string;
+    field: string;
+    format?: string;
+    label: string;
+    name: string;
 }
 
 export interface DescribeSort {
-    ascending : boolean;
-    column : string;
+    ascending: boolean;
+    column: string;
 }
 
 export interface DescribeLookupLayoutResult {
-    label : string;
-    limitRows : number;
-    lookupColumns? : DescribeColumn | DescribeColumn[];
+    label: string;
+    limitRows: number;
+    lookupColumns?: DescribeColumn | DescribeColumn[];
 }
 
 export interface ListViewColumn {
-    ascendingLabel? : string;
-    descendingLabel? : string;
-    fieldNameOrPath : string;
-    hidden : boolean;
-    label : string;
-    searchable : boolean;
-    selectListItem : string;
-    sortDirection? : orderByDirection;
-    sortIndex? : number;
-    sortable : boolean;
-    type : fieldType;
+    ascendingLabel?: string;
+    descendingLabel?: string;
+    fieldNameOrPath: string;
+    hidden: boolean;
+    label: string;
+    searchable: boolean;
+    selectListItem: string;
+    sortDirection?: orderByDirection;
+    sortIndex?: number;
+    sortable: boolean;
+    type: fieldType;
 }
 
 export interface ListViewOrderBy {
-    fieldNameOrPath : string;
-    nullsPosition? : orderByNullsPosition;
-    sortDirection? : orderByDirection;
+    fieldNameOrPath: string;
+    nullsPosition?: orderByNullsPosition;
+    sortDirection?: orderByDirection;
 }
 
 export interface DescribeSoqlListView {
-    columns : ListViewColumn | ListViewColumn[];
-    id : ID;
-    orderBy : ListViewOrderBy | ListViewOrderBy[];
-    query : string;
-    relatedEntityId? : ID;
-    scope? : string;
-    scopeEntityId? : ID;
-    sobjectType : string;
-    whereCondition? : SoqlWhereCondition;
+    columns: ListViewColumn | ListViewColumn[];
+    id: ID;
+    orderBy: ListViewOrderBy | ListViewOrderBy[];
+    query: string;
+    relatedEntityId?: ID;
+    scope?: string;
+    scopeEntityId?: ID;
+    sobjectType: string;
+    whereCondition?: SoqlWhereCondition;
 }
 
 export interface DescribeSoqlListViewsRequest {
-    listViewParams : DescribeSoqlListViewParams | DescribeSoqlListViewParams[];
+    listViewParams: DescribeSoqlListViewParams | DescribeSoqlListViewParams[];
 }
 
 export interface DescribeSoqlListViewParams {
-    developerNameOrId : string;
-    sobjectType? : string;
+    developerNameOrId: string;
+    sobjectType?: string;
 }
 
 export interface DescribeSoqlListViewResult {
-    describeSoqlListViews : DescribeSoqlListView | DescribeSoqlListView[];
+    describeSoqlListViews: DescribeSoqlListView | DescribeSoqlListView[];
 }
 
 export interface ExecuteListViewRequest {
-    developerNameOrId : string;
-    limit? : number;
-    offset? : number;
-    orderBy : ListViewOrderBy | ListViewOrderBy[];
-    sobjectType : string;
+    developerNameOrId: string;
+    limit?: number;
+    offset?: number;
+    orderBy: ListViewOrderBy | ListViewOrderBy[];
+    sobjectType: string;
 }
 
 export interface ExecuteListViewResult {
-    columns : ListViewColumn | ListViewColumn[];
-    developerName : string;
-    done : boolean;
-    id : ID;
-    label : string;
-    records : ListViewRecord | ListViewRecord[];
-    size : number;
+    columns: ListViewColumn | ListViewColumn[];
+    developerName: string;
+    done: boolean;
+    id: ID;
+    label: string;
+    records: ListViewRecord | ListViewRecord[];
+    size: number;
 }
 
 export interface ListViewRecord {
-    columns : ListViewRecordColumn | ListViewRecordColumn[];
+    columns: ListViewRecordColumn | ListViewRecordColumn[];
 }
 
 export interface ListViewRecordColumn {
-    fieldNameOrPath : string;
-    value? : string;
+    fieldNameOrPath: string;
+    value?: string;
 }
 
 export interface SoqlWhereCondition {
 }
 
 export interface SoqlCondition extends SoqlWhereCondition {
-    field : string;
-    operator : soqlOperator;
-    values : string | string[];
+    field: string;
+    operator: soqlOperator;
+    values: string | string[];
 }
 
 export interface SoqlNotCondition extends SoqlWhereCondition {
-    condition : SoqlWhereCondition;
+    condition: SoqlWhereCondition;
 }
 
 export interface SoqlConditionGroup extends SoqlWhereCondition {
-    conditions? : SoqlWhereCondition | SoqlWhereCondition[];
-    conjunction : soqlConjunction;
+    conditions?: SoqlWhereCondition | SoqlWhereCondition[];
+    conjunction: soqlConjunction;
 }
 
 export interface SoqlSubQueryCondition extends SoqlWhereCondition {
-    field : string;
-    operator : soqlOperator;
-    subQuery : string;
+    field: string;
+    operator: soqlOperator;
+    subQuery: string;
 }
 
 export interface DescribeSearchLayoutResult {
-    errorMsg? : string;
-    label? : string;
-    limitRows? : number;
-    objectType : string;
-    searchColumns? : DescribeColumn | DescribeColumn[];
+    errorMsg?: string;
+    label?: string;
+    limitRows?: number;
+    objectType: string;
+    searchColumns?: DescribeColumn | DescribeColumn[];
 }
 
 export interface DescribeSearchScopeOrderResult {
-    keyPrefix : string;
-    name : string;
+    keyPrefix: string;
+    name: string;
 }
 
 export interface DescribeSearchableEntityResult {
-    label : string;
-    name : string;
-    pluralLabel : string;
+    label: string;
+    name: string;
+    pluralLabel: string;
 }
 
 export interface DescribeTabSetResult {
-    description : string;
-    label : string;
-    logoUrl : string;
-    namespace? : string;
-    selected : boolean;
-    tabSetId : string;
-    tabs? : DescribeTab | DescribeTab[];
+    description: string;
+    label: string;
+    logoUrl: string;
+    namespace?: string;
+    selected: boolean;
+    tabSetId: string;
+    tabs?: DescribeTab | DescribeTab[];
 }
 
 export interface DescribeTab {
-    colors? : DescribeColor | DescribeColor[];
-    custom : boolean;
-    iconUrl : string;
-    icons? : DescribeIcon | DescribeIcon[];
-    label : string;
-    miniIconUrl : string;
-    name : string;
-    sobjectName? : string;
-    url : string;
+    colors?: DescribeColor | DescribeColor[];
+    custom: boolean;
+    iconUrl: string;
+    icons?: DescribeIcon | DescribeIcon[];
+    label: string;
+    miniIconUrl: string;
+    name: string;
+    sobjectName?: string;
+    url: string;
 }
 
 export interface DescribeColor {
-    color : string;
-    context : string;
-    theme : string;
+    color: string;
+    context: string;
+    theme: string;
 }
 
 export interface DescribeIcon {
-    contentType : string;
-    height? : number;
-    theme : string;
-    url : string;
-    width? : number;
+    contentType: string;
+    height?: number;
+    theme: string;
+    url: string;
+    width?: number;
 }
 
 export interface ActionOverride {
-    formFactor? : string;
-    isAvailableInTouch : boolean;
-    name : string;
-    pageId : ID;
-    url? : string;
+    formFactor?: string;
+    isAvailableInTouch: boolean;
+    name: string;
+    pageId: ID;
+    url?: string;
 }
 
 export interface ActivateResult {
-    errors? : Error | Error[];
-    id? : ID;
-    success : boolean;
+    errors?: Error | Error[];
+    id?: ID;
+    success: boolean;
 }
 
 export interface SnapshotItem {
-    oid : ID;
-    uid : ID;
+    oid: ID;
+    uid: ID;
 }
 
 export interface SnapshotResult {
-    add? : SnapshotItem | SnapshotItem[];
-    fullSnapshot : boolean;
-    id : ID;
-    locator? : string;
-    remove? : SnapshotItem | SnapshotItem[];
+    add?: SnapshotItem | SnapshotItem[];
+    fullSnapshot: boolean;
+    id: ID;
+    locator?: string;
+    remove?: SnapshotItem | SnapshotItem[];
 }
 
 export interface SyncOfflineDataResult {
-    lastConfigChange : Date;
-    lastFullQuery : Date;
-    lastQuery : Date;
-    lastReset : Date;
-    removed? : ID | ID[];
-    timestamp : Date;
-    token : string;
-    updates : QueryResult;
+    lastConfigChange: Date;
+    lastFullQuery: Date;
+    lastQuery: Date;
+    lastReset: Date;
+    removed?: ID | ID[];
+    timestamp: Date;
+    token: string;
+    updates: QueryResult;
 }
 
 export interface EmailSyncAdvancedSetting {
-    name : string;
-    type : string;
-    value : string;
+    name: string;
+    type: string;
+    value: string;
 }
 
 export interface EmailSyncEntity {
-    clientFolderName? : string;
-    conflictResolution : EmailSyncConflictResolution;
-    dataSetFilter? : string;
-    fieldMapping? : EmailSyncFieldMapping | EmailSyncFieldMapping[];
-    matchPreference? : EmailSyncMatchPreference;
-    name : string;
-    recordTypeId? : ID;
-    syncDirection : EmailSyncDirection;
-    syncFollowed : boolean;
+    clientFolderName?: string;
+    conflictResolution: EmailSyncConflictResolution;
+    dataSetFilter?: string;
+    fieldMapping?: EmailSyncFieldMapping | EmailSyncFieldMapping[];
+    matchPreference?: EmailSyncMatchPreference;
+    name: string;
+    recordTypeId?: ID;
+    syncDirection: EmailSyncDirection;
+    syncFollowed: boolean;
 }
 
 export interface EmailSyncFieldMapping {
-    clientName : string;
-    clientType : EmailSyncClientFieldType;
-    name : string;
-    type : fieldType;
-    usedForMatching : boolean;
-    valueMapping? : EmailSyncFieldValueMapping | EmailSyncFieldValueMapping[];
+    clientName: string;
+    clientType: EmailSyncClientFieldType;
+    name: string;
+    type: fieldType;
+    usedForMatching: boolean;
+    valueMapping?: EmailSyncFieldValueMapping | EmailSyncFieldValueMapping[];
 }
 
 export interface EmailSyncFieldValueMapping {
-    clientValue : string;
-    value : string;
+    clientValue: string;
+    value: string;
 }
 
 export interface EmailSyncRoutingAddress {
-    emailAddress : string;
-    fromAddressFilter? : string | string[];
-    name : string;
+    emailAddress: string;
+    fromAddressFilter?: string | string[];
+    name: string;
 }
 
 export interface DescribeEmailSyncSettings {
-    addCase : boolean;
-    addEmail : boolean;
-    addEmailAttachment : boolean;
-    advancedSetting? : EmailSyncAdvancedSetting | EmailSyncAdvancedSetting[];
-    attachmentSizeLimit? : number;
-    automaticallySyncOutlookObjects : boolean;
-    cannotChangeClientSyncSetting : boolean;
-    clientVersionNumber? : string;
-    emailToCaseRoutingAddress? : EmailSyncRoutingAddress | EmailSyncRoutingAddress[];
-    entitySetting? : EmailSyncEntity | EmailSyncEntity[];
-    expandedRecurringEventSyncWindow : boolean;
-    isSyncThrottlingEnabled : boolean;
-    logActivityEmailAddress? : string;
-    personAccountRecordTypeId? : ID;
-    recurringEvents : boolean;
-    recurringTasks : boolean;
-    showPersonAccountsAsAccounts : boolean;
-    showPersonAccountsAsContacts : boolean;
-    sidePanel : boolean;
-    upgradeNotification : boolean;
+    addCase: boolean;
+    addEmail: boolean;
+    addEmailAttachment: boolean;
+    advancedSetting?: EmailSyncAdvancedSetting | EmailSyncAdvancedSetting[];
+    attachmentSizeLimit?: number;
+    automaticallySyncOutlookObjects: boolean;
+    cannotChangeClientSyncSetting: boolean;
+    clientVersionNumber?: string;
+    emailToCaseRoutingAddress?: EmailSyncRoutingAddress | EmailSyncRoutingAddress[];
+    entitySetting?: EmailSyncEntity | EmailSyncEntity[];
+    expandedRecurringEventSyncWindow: boolean;
+    isSyncThrottlingEnabled: boolean;
+    logActivityEmailAddress?: string;
+    personAccountRecordTypeId?: ID;
+    recurringEvents: boolean;
+    recurringTasks: boolean;
+    showPersonAccountsAsAccounts: boolean;
+    showPersonAccountsAsContacts: boolean;
+    sidePanel: boolean;
+    upgradeNotification: boolean;
 }
 
 export interface DescribeMobileResult {
-    configured : boolean;
-    defaultConfiguration : boolean;
-    emailSyncSettings? : DescribeEmailSyncSettings;
-    feedEnabledObjects? : DescribeMobileSObject | DescribeMobileSObject[];
-    mobileSObject? : DescribeMobileSObject | DescribeMobileSObject[];
-    mobileSettings? : DescribeMobileSettings;
-    mobileView? : DescribeMobileView | DescribeMobileView[];
-    mobileViewDispColumn? : DescribeMobileViewDispColumn | DescribeMobileViewDispColumn[];
-    mobileViewFilter? : DescribeMobileViewFilter | DescribeMobileViewFilter[];
-    mobileViewSortOrder? : DescribeMobileViewSortOrder | DescribeMobileViewSortOrder[];
-    tabSet? : DescribeTabSetResult | DescribeTabSetResult[];
+    configured: boolean;
+    defaultConfiguration: boolean;
+    emailSyncSettings?: DescribeEmailSyncSettings;
+    feedEnabledObjects?: DescribeMobileSObject | DescribeMobileSObject[];
+    mobileSObject?: DescribeMobileSObject | DescribeMobileSObject[];
+    mobileSettings?: DescribeMobileSettings;
+    mobileView?: DescribeMobileView | DescribeMobileView[];
+    mobileViewDispColumn?: DescribeMobileViewDispColumn | DescribeMobileViewDispColumn[];
+    mobileViewFilter?: DescribeMobileViewFilter | DescribeMobileViewFilter[];
+    mobileViewSortOrder?: DescribeMobileViewSortOrder | DescribeMobileViewSortOrder[];
+    tabSet?: DescribeTabSetResult | DescribeTabSetResult[];
 }
 
 export interface DescribeMobileSObject {
-    iconUrl? : string;
-    layout? : DescribeLayoutResult;
-    searchLayout? : DescribeSearchLayoutResult;
-    sobject : DescribeSObjectResult;
+    iconUrl?: string;
+    layout?: DescribeLayoutResult;
+    searchLayout?: DescribeSearchLayoutResult;
+    sobject: DescribeSObjectResult;
 }
 
 export interface DescribeMobileView {
-    SObject : string;
-    matchAll : boolean;
-    name : string;
-    viewId : ID;
+    SObject: string;
+    matchAll: boolean;
+    name: string;
+    viewId: ID;
 }
 
 export interface DescribeMobileViewDispColumn {
-    column : number;
-    field : string;
-    viewId : ID;
+    column: number;
+    field: string;
+    viewId: ID;
 }
 
 export interface DescribeMobileViewFilter {
-    field : string;
-    operator : string;
-    value : string;
-    viewId : ID;
+    field: string;
+    operator: string;
+    value: string;
+    viewId: ID;
 }
 
 export interface DescribeMobileViewSortOrder {
-    ascending : boolean;
-    field : string;
-    order : number;
-    viewId : ID;
+    ascending: boolean;
+    field: string;
+    order: number;
+    viewId: ID;
 }
 
 export interface DescribeMobileSettings {
-    lockUserToMobileDevice : boolean;
-    mappingURL : string;
-    maxTextFieldSize? : number;
-    mobileDeviceHelpUrl? : string;
-    mobileLite : boolean;
-    mobilizeFollowed : boolean;
-    multiDayEventsEnabled : boolean;
+    lockUserToMobileDevice: boolean;
+    mappingURL: string;
+    maxTextFieldSize?: number;
+    mobileDeviceHelpUrl?: string;
+    mobileLite: boolean;
+    mobilizeFollowed: boolean;
+    multiDayEventsEnabled: boolean;
 }
 
 export interface RenderEmailTemplateRequest {
-    escapeHtmlInMergeFields? : boolean;
-    templateBodies : string;
-    whatId? : ID;
-    whoId? : ID;
+    escapeHtmlInMergeFields?: boolean;
+    templateBodies: string;
+    whatId?: ID;
+    whoId?: ID;
 }
 
 export interface RenderEmailTemplateBodyResult {
-    errors? : RenderEmailTemplateError | RenderEmailTemplateError[];
-    mergedBody? : string;
-    success : boolean;
+    errors?: RenderEmailTemplateError | RenderEmailTemplateError[];
+    mergedBody?: string;
+    success: boolean;
 }
 
 export interface RenderEmailTemplateResult {
-    bodyResults? : RenderEmailTemplateBodyResult;
-    errors? : Error | Error[];
-    success : boolean;
+    bodyResults?: RenderEmailTemplateBodyResult;
+    errors?: Error | Error[];
+    success: boolean;
 }
 
 export interface RenderStoredEmailTemplateRequest {
-    attachmentRetrievalOption? : AttachmentRetrievalOption;
-    templateId : ID;
-    updateTemplateUsage? : boolean;
-    whatId? : ID;
-    whoId? : ID;
+    attachmentRetrievalOption?: AttachmentRetrievalOption;
+    templateId: ID;
+    updateTemplateUsage?: boolean;
+    whatId?: ID;
+    whoId?: ID;
 }
 
 export interface RenderStoredEmailTemplateResult {
-    errors? : Error | Error[];
-    renderedEmail? : SingleEmailMessage;
-    success : boolean;
+    errors?: Error | Error[];
+    renderedEmail?: SingleEmailMessage;
+    success: boolean;
 }
 
 export interface Fact {
-    fact : MetadataVersionCheckFact;
-    subject : string;
-    token : string;
+    fact: MetadataVersionCheckFact;
+    subject: string;
+    token: string;
 }
 
 export interface LogInfo {
-    category : LogCategory;
-    level : LogCategoryLevel;
+    category: LogCategory;
+    level: LogCategoryLevel;
 }
 
 export interface PackageVersion {
-    majorNumber : number;
-    minorNumber : number;
-    namespace : string;
+    majorNumber: number;
+    minorNumber: number;
+    namespace: string;
 }
 
 export interface LimitInfo {
-    appName? : string;
-    current : number;
-    limit : number;
-    type : string;
+    appName?: string;
+    current: number;
+    limit: number;
+    type: string;
 }
 
 export interface MatchOptions {
-    fields : string;
-    matchEngine : string;
-    maxMatchResults : number;
-    minMatchConfidence : number;
-    rule : string;
-    sObjectType : string;
+    fields: string;
+    matchEngine: string;
+    maxMatchResults: number;
+    minMatchConfidence: number;
+    rule: string;
+    sObjectType: string;
 }
 
 export interface OwnerChangeOption {
-    type : OwnerChangeOptionType;
-    execute : boolean;
+    type: OwnerChangeOptionType;
+    execute: boolean;
 }
 
 export interface findDuplicates {
-    sObjects? : sObject | sObject[];
+    sObjects?: sObject | sObject[];
 }
 
 export interface findDuplicatesByIds {
-    ids : ID | ID[];
+    ids: ID | ID[];
 }
 
 export interface findDuplicatesByIdsResponse {
-    result? : FindDuplicatesResult | FindDuplicatesResult[];
+    result?: FindDuplicatesResult | FindDuplicatesResult[];
 }
 
 export interface findDuplicatesResponse {
-    result? : FindDuplicatesResult | FindDuplicatesResult[];
+    result?: FindDuplicatesResult | FindDuplicatesResult[];
 }
 
 export interface createSnapshot {
-    sObject : string;
-    forceFullSnapshot : boolean;
+    sObject: string;
+    forceFullSnapshot: boolean;
 }
 
 export interface createSnapshotResponse {
-    result : SnapshotResult;
+    result: SnapshotResult;
 }
 
 export interface moreSnapshot {
-    snapshotLocator : string;
+    snapshotLocator: string;
 }
 
 export interface moreSnapshotResponse {
-    result : SnapshotResult;
+    result: SnapshotResult;
 }
 
 export interface ackSnapshot {
-    snapshotId : ID;
+    snapshotId: ID;
 }
 
 export interface ackSnapshotResponse {
 }
 
 export interface syncOfflineData {
-    reset : boolean;
-    userRequested : boolean;
-    syncStateId : string;
-    syncFull : boolean;
-    skipNewsFeeds : boolean;
-    idsToSpider? : ID | ID[];
-    entitiesToSync? : string | string[];
+    reset: boolean;
+    userRequested: boolean;
+    syncStateId: string;
+    syncFull: boolean;
+    skipNewsFeeds: boolean;
+    idsToSpider?: ID | ID[];
+    entitiesToSync?: string | string[];
 }
 
 export interface syncOfflineDataResponse {
-    result : SyncOfflineDataResult;
+    result: SyncOfflineDataResult;
 }
 
 export interface ackSyncOfflineData {
-    token : string;
-    syncStateId : string;
+    token: string;
+    syncStateId: string;
 }
 
 export interface ackSyncOfflineDataResponse {
@@ -3673,589 +3676,589 @@ export interface describeMobile {
 }
 
 export interface describeMobileResponse {
-    result : DescribeMobileResult;
+    result: DescribeMobileResult;
 }
 
 export interface loginXi {
-    username : string;
+    username: string;
 }
 
 export interface loginXiResponse {
-    result : LoginResult;
+    result: LoginResult;
 }
 
 export interface login {
-    username : string;
-    password : string;
+    username: string;
+    password: string;
 }
 
 export interface loginResponse {
-    result : LoginResult;
+    result: LoginResult;
 }
 
 export interface describeSObject {
-    sObjectType : string;
+    sObjectType: string;
 }
 
 export interface describeSObjectResponse {
-    result? : DescribeSObjectResult;
+    result?: DescribeSObjectResult;
 }
 
 export interface discoverSchemas {
-    scope : SchemaScope;
-    typeFilter : SchemaType;
+    scope: SchemaScope;
+    typeFilter: SchemaType;
 }
 
 export interface discoverSchemasResponse {
-    result? : DiscoverSchemasResult;
+    result?: DiscoverSchemasResult;
 }
 
 export interface describeSchema {
-    type : string;
+    type: string;
 }
 
 export interface describeSchemaResponse {
-    result? : DescribeSchemaResult;
+    result?: DescribeSchemaResult;
 }
 
 export interface describePicklists {
-    param : DescribePicklistsParam;
+    param: DescribePicklistsParam;
 }
 
 export interface describePicklistsResponse {
-    result? : DescribePicklistResult;
+    result?: DescribePicklistResult;
 }
 
 export interface captureCommonEvent {
-    appName : string;
-    eventValues : string;
-    eventName : EventName;
+    appName: string;
+    eventValues: string;
+    eventName: EventName;
 }
 
 export interface captureCommonEventResponse {
-    result? : CommonEventResult;
+    result?: CommonEventResult;
 }
 
 export interface describeSObjects {
-    sObjectType? : string;
+    sObjectType?: string;
 }
 
 export interface describeSObjectsResponse {
-    result? : DescribeSObjectResult;
+    result?: DescribeSObjectResult;
 }
 
 export interface describeGlobal {
 }
 
 export interface describeGlobalResponse {
-    result : DescribeGlobalResult;
+    result: DescribeGlobalResult;
 }
 
 export interface describeGlobalTheme {
 }
 
 export interface describeGlobalThemeResponse {
-    result : DescribeGlobalTheme;
+    result: DescribeGlobalTheme;
 }
 
 export interface describeTheme {
-    sobjectType? : string | string[];
+    sobjectType?: string | string[];
 }
 
 export interface describeThemeResponse {
-    result : DescribeThemeResult;
+    result: DescribeThemeResult;
 }
 
 export interface describeDataCategoryGroups {
-    sObjectType? : string;
+    sObjectType?: string;
 }
 
 export interface describeDataCategoryGroupsResponse {
-    result? : DescribeDataCategoryGroupResult;
+    result?: DescribeDataCategoryGroupResult;
 }
 
 export interface describeDataCategoryGroupStructures {
-    pairs? : DataCategoryGroupSobjectTypePair;
-    topCategoriesOnly : boolean;
+    pairs?: DataCategoryGroupSobjectTypePair;
+    topCategoriesOnly: boolean;
 }
 
 export interface describeDataCategoryGroupStructuresResponse {
-    result? : DescribeDataCategoryGroupStructureResult;
+    result?: DescribeDataCategoryGroupStructureResult;
 }
 
 export interface describeDataCategoryMappings {
 }
 
 export interface describeDataCategoryMappingsResponse {
-    result? : DescribeDataCategoryMappingResult;
+    result?: DescribeDataCategoryMappingResult;
 }
 
 export interface describeKnowledgeSettings {
 }
 
 export interface describeKnowledgeSettingsResponse {
-    result : KnowledgeSettings;
+    result: KnowledgeSettings;
 }
 
 export interface describeDuplicateRules {
-    sObjectType : string;
+    sObjectType: string;
 }
 
 export interface describeDuplicateRulesResponse {
-    result? : DescribeDuplicateRuleResult | DescribeDuplicateRuleResult[];
+    result?: DescribeDuplicateRuleResult | DescribeDuplicateRuleResult[];
 }
 
 export interface ftestPatch {
 }
 
 export interface ftestPatchResponse {
-    result : SaveResult;
+    result: SaveResult;
 }
 
 export interface ftestPatchPreviousVersion {
 }
 
 export interface ftestPatchPreviousVersionResponse {
-    result : SaveResult;
+    result: SaveResult;
 }
 
 export interface describeFlexiPages {
-    flexiPages : string | string[];
-    contexts? : FlexipageContext | FlexipageContext[];
+    flexiPages: string | string[];
+    contexts?: FlexipageContext | FlexipageContext[];
 }
 
 export interface describeFlexiPagesResponse {
-    result? : DescribeFlexiPageResult | DescribeFlexiPageResult[];
+    result?: DescribeFlexiPageResult | DescribeFlexiPageResult[];
 }
 
 export interface describeAppMenu {
-    appMenuType : AppMenuType;
-    networkId? : ID;
+    appMenuType: AppMenuType;
+    networkId?: ID;
 }
 
 export interface describeAppMenuResponse {
-    result? : DescribeAppMenuResult;
+    result?: DescribeAppMenuResult;
 }
 
 export interface describeLayout {
-    sObjectType : string;
-    layoutName? : string;
-    recordTypeIds? : ID | ID[];
+    sObjectType: string;
+    layoutName?: string;
+    recordTypeIds?: ID | ID[];
 }
 
 export interface describeLayoutByUiType {
-    sObjectType : string;
-    layoutName? : string;
-    recordTypeIds? : ID | ID[];
-    uiType? : UiType;
+    sObjectType: string;
+    layoutName?: string;
+    recordTypeIds?: ID | ID[];
+    uiType?: UiType;
 }
 
 export interface describeLayoutByUiTypeResponse {
-    result? : DescribeLayoutResult;
+    result?: DescribeLayoutResult;
 }
 
 export interface describeLayoutResponse {
-    result? : DescribeLayoutResult;
+    result?: DescribeLayoutResult;
 }
 
 export interface describeMiniLayout {
-    sObjectType : string;
-    layoutName? : string;
-    recordTypeIds? : ID | ID[];
+    sObjectType: string;
+    layoutName?: string;
+    recordTypeIds?: ID | ID[];
 }
 
 export interface describeMiniLayoutResponse {
-    result? : DescribeMiniLayoutResult;
+    result?: DescribeMiniLayoutResult;
 }
 
 export interface describeCompactLayouts {
-    sObjectType : string;
-    recordTypeIds? : ID | ID[];
+    sObjectType: string;
+    recordTypeIds?: ID | ID[];
 }
 
 export interface describeCompactLayoutsResponse {
-    result? : DescribeCompactLayoutsResult;
+    result?: DescribeCompactLayoutsResult;
 }
 
 export interface describePrimaryCompactLayouts {
-    sObjectTypes : string | string[];
+    sObjectTypes: string | string[];
 }
 
 export interface describePrimaryCompactLayoutsResponse {
-    result? : DescribeCompactLayout | DescribeCompactLayout[];
+    result?: DescribeCompactLayout | DescribeCompactLayout[];
 }
 
 export interface describePathAssistants {
-    sObjectType : string;
-    picklistValue? : string;
-    recordTypeIds? : ID | ID[];
+    sObjectType: string;
+    picklistValue?: string;
+    recordTypeIds?: ID | ID[];
 }
 
 export interface describePathAssistantsResponse {
-    result? : DescribePathAssistantsResult;
+    result?: DescribePathAssistantsResult;
 }
 
 export interface describeApprovalLayout {
-    sObjectType : string;
-    approvalProcessNames? : string | string[];
+    sObjectType: string;
+    approvalProcessNames?: string | string[];
 }
 
 export interface describeApprovalLayoutResponse {
-    result? : DescribeApprovalLayoutResult;
+    result?: DescribeApprovalLayoutResult;
 }
 
 export interface describeSoftphoneLayout {
 }
 
 export interface describeSoftphoneLayoutResponse {
-    result? : DescribeSoftphoneLayoutResult;
+    result?: DescribeSoftphoneLayoutResult;
 }
 
 export interface describeListViews {
-    sObjectType? : string | string[];
+    sObjectType?: string | string[];
 }
 
 export interface describeListViewsResponse {
-    result? : DescribeListViewResult | DescribeListViewResult[];
+    result?: DescribeListViewResult | DescribeListViewResult[];
 }
 
 export interface describeLookupLayouts {
-    sObjectType? : string | string[];
+    sObjectType?: string | string[];
 }
 
 export interface describeLookupLayoutsResponse {
-    result? : DescribeLookupLayoutResult | DescribeLookupLayoutResult[];
+    result?: DescribeLookupLayoutResult | DescribeLookupLayoutResult[];
 }
 
 export interface describeSoqlListViews {
-    request : DescribeSoqlListViewsRequest;
+    request: DescribeSoqlListViewsRequest;
 }
 
 export interface describeSoqlListViewsResponse {
-    result : DescribeSoqlListViewResult;
+    result: DescribeSoqlListViewResult;
 }
 
 export interface executeListView {
-    request : ExecuteListViewRequest;
+    request: ExecuteListViewRequest;
 }
 
 export interface executeListViewResponse {
-    result? : ExecuteListViewResult;
+    result?: ExecuteListViewResult;
 }
 
 export interface describeSObjectListViews {
-    sObjectType : string;
-    recentsOnly : boolean;
-    isSoqlCompatible : listViewIsSoqlCompatible;
-    limit : number;
-    offset : number;
+    sObjectType: string;
+    recentsOnly: boolean;
+    isSoqlCompatible: listViewIsSoqlCompatible;
+    limit: number;
+    offset: number;
 }
 
 export interface describeSObjectListViewsResponse {
-    result : DescribeSoqlListViewResult;
+    result: DescribeSoqlListViewResult;
 }
 
 export interface describeSearchLayouts {
-    sObjectType? : string | string[];
+    sObjectType?: string | string[];
 }
 
 export interface describeSearchLayoutsResponse {
-    result? : DescribeSearchLayoutResult | DescribeSearchLayoutResult[];
+    result?: DescribeSearchLayoutResult | DescribeSearchLayoutResult[];
 }
 
 export interface describeSearchScopeOrder {
-    includeRealTimeEntities? : boolean;
+    includeRealTimeEntities?: boolean;
 }
 
 export interface describeSearchScopeOrderResponse {
-    result? : DescribeSearchScopeOrderResult | DescribeSearchScopeOrderResult[];
+    result?: DescribeSearchScopeOrderResult | DescribeSearchScopeOrderResult[];
 }
 
 export interface describeSearchableEntities {
-    includeOnlyEntitiesWithTabs : boolean;
+    includeOnlyEntitiesWithTabs: boolean;
 }
 
 export interface describeSearchableEntitiesResponse {
-    result? : DescribeSearchableEntityResult | DescribeSearchableEntityResult[];
+    result?: DescribeSearchableEntityResult | DescribeSearchableEntityResult[];
 }
 
 export interface describeTabs {
 }
 
 export interface describeTabsResponse {
-    result? : DescribeTabSetResult | DescribeTabSetResult[];
+    result?: DescribeTabSetResult | DescribeTabSetResult[];
 }
 
 export interface describeAllTabs {
 }
 
 export interface describeAllTabsResponse {
-    result? : DescribeTab | DescribeTab[];
+    result?: DescribeTab | DescribeTab[];
 }
 
 export interface describeNouns {
-    nouns? : string;
-    onlyRenamed : boolean;
-    includeFields : boolean;
+    nouns?: string;
+    onlyRenamed: boolean;
+    includeFields: boolean;
 }
 
 export interface describeNounsResponse {
-    result? : DescribeNounResult | DescribeNounResult[];
+    result?: DescribeNounResult | DescribeNounResult[];
 }
 
 export interface create {
-    sObjects? : sObject | sObject[];
+    sObjects?: sObject | sObject[];
 }
 
 export interface createResponse {
-    result? : SaveResult | SaveResult[];
+    result?: SaveResult | SaveResult[];
 }
 
 export interface sendEmail {
-    messages? : Email;
+    messages?: Email;
 }
 
 export interface sendEmailResponse {
-    result? : SendEmailResult;
+    result?: SendEmailResult;
 }
 
 export interface renderEmailTemplate {
-    renderRequests? : RenderEmailTemplateRequest;
+    renderRequests?: RenderEmailTemplateRequest;
 }
 
 export interface renderEmailTemplateResponse {
-    result? : RenderEmailTemplateResult;
+    result?: RenderEmailTemplateResult;
 }
 
 export interface renderStoredEmailTemplate {
-    request : RenderStoredEmailTemplateRequest;
+    request: RenderStoredEmailTemplateRequest;
 }
 
 export interface renderStoredEmailTemplateResponse {
-    result : RenderStoredEmailTemplateResult;
+    result: RenderStoredEmailTemplateResult;
 }
 
 export interface sendEmailMessage {
-    ids? : ID;
+    ids?: ID;
 }
 
 export interface sendEmailMessageResponse {
-    result? : SendEmailResult;
+    result?: SendEmailResult;
 }
 
 export interface emailMerge {
-    template : ID;
-    id : ID | ID[];
+    template: ID;
+    id: ID | ID[];
 }
 
 export interface emailMergeResponse {
-    result? : string | string[];
+    result?: string | string[];
 }
 
 export interface update {
-    sObjects? : sObject | sObject[];
+    sObjects?: sObject | sObject[];
 }
 
 export interface updateResponse {
-    result? : SaveResult | SaveResult[];
+    result?: SaveResult | SaveResult[];
 }
 
 export interface upsert {
-    externalIDFieldName : string;
-    sObjects? : sObject | sObject[];
+    externalIDFieldName: string;
+    sObjects?: sObject | sObject[];
 }
 
 export interface upsertResponse {
-    result? : UpsertResult | UpsertResult[];
+    result?: UpsertResult | UpsertResult[];
 }
 
 export interface merge {
-    request? : MergeRequest | MergeRequest[];
+    request?: MergeRequest | MergeRequest[];
 }
 
 export interface mergeResponse {
-    result? : MergeResult | MergeResult[];
+    result?: MergeResult | MergeResult[];
 }
 
-export interface delete {
-    ids? : ID | ID[];
+export interface delete_ {
+    ids?: ID | ID[];
 }
 
 export interface deleteResponse {
-    result? : DeleteResult | DeleteResult[];
+    result?: DeleteResult | DeleteResult[];
 }
 
 export interface deleteByExample {
-    sObjects? : sObject | sObject[];
+    sObjects?: sObject | sObject[];
 }
 
 export interface deleteByExampleResponse {
-    result? : DeleteByExampleResult | DeleteByExampleResult[];
+    result?: DeleteByExampleResult | DeleteByExampleResult[];
 }
 
 export interface undelete {
-    ids : ID | ID[];
+    ids: ID | ID[];
 }
 
 export interface undeleteResponse {
-    result : UndeleteResult | UndeleteResult[];
+    result: UndeleteResult | UndeleteResult[];
 }
 
 export interface updateSettings {
-    settingNames : string | string[];
-    settingValues : string | string[];
+    settingNames: string | string[];
+    settingValues: string | string[];
 }
 
 export interface updateSettingsResponse {
-    result? : SaveResult | SaveResult[];
+    result?: SaveResult | SaveResult[];
 }
 
 export interface emptyRecycleBin {
-    ids : ID | ID[];
+    ids: ID | ID[];
 }
 
 export interface emptyRecycleBinResponse {
-    result : EmptyRecycleBinResult | EmptyRecycleBinResult[];
+    result: EmptyRecycleBinResult | EmptyRecycleBinResult[];
 }
 
 export interface process {
-    actions? : ProcessRequest | ProcessRequest[];
+    actions?: ProcessRequest | ProcessRequest[];
 }
 
 export interface processResponse {
-    result? : ProcessResult | ProcessResult[];
+    result?: ProcessResult | ProcessResult[];
 }
 
 export interface performQuickActions {
-    quickActions? : PerformQuickActionRequest | PerformQuickActionRequest[];
+    quickActions?: PerformQuickActionRequest | PerformQuickActionRequest[];
 }
 
 export interface performQuickActionsResponse {
-    result? : PerformQuickActionResult | PerformQuickActionResult[];
+    result?: PerformQuickActionResult | PerformQuickActionResult[];
 }
 
 export interface retrieveMassQuickActionTemplates {
-    quickActionName : string;
-    contextIds? : ID | ID[];
+    quickActionName: string;
+    contextIds?: ID | ID[];
 }
 
 export interface retrieveMassQuickActionTemplatesResponse {
-    result? : QuickActionTemplateResult | QuickActionTemplateResult[];
+    result?: QuickActionTemplateResult | QuickActionTemplateResult[];
 }
 
 export interface retrieveQuickActionTemplates {
-    quickActionNames? : string | string[];
-    contextId? : ID;
+    quickActionNames?: string | string[];
+    contextId?: ID;
 }
 
 export interface retrieveQuickActionTemplatesResponse {
-    result? : QuickActionTemplateResult | QuickActionTemplateResult[];
+    result?: QuickActionTemplateResult | QuickActionTemplateResult[];
 }
 
 export interface describeQuickActions {
-    quickActions? : string | string[];
+    quickActions?: string | string[];
 }
 
 export interface describeQuickActionsResponse {
-    result? : DescribeQuickActionResult | DescribeQuickActionResult[];
+    result?: DescribeQuickActionResult | DescribeQuickActionResult[];
 }
 
 export interface describeQuickActionsForRecordType {
-    quickActions? : string | string[];
-    recordTypeId : string;
+    quickActions?: string | string[];
+    recordTypeId: string;
 }
 
 export interface describeQuickActionsForRecordTypeResponse {
-    result? : DescribeQuickActionResult | DescribeQuickActionResult[];
+    result?: DescribeQuickActionResult | DescribeQuickActionResult[];
 }
 
 export interface describeAvailableQuickActions {
-    contextType? : string;
+    contextType?: string;
 }
 
 export interface describeAvailableQuickActionsResponse {
-    result? : DescribeAvailableQuickActionResult | DescribeAvailableQuickActionResult[];
+    result?: DescribeAvailableQuickActionResult | DescribeAvailableQuickActionResult[];
 }
 
 export interface describeVisualForce {
-    includeAllDetails : boolean;
-    namespacePrefix? : string;
+    includeAllDetails: boolean;
+    namespacePrefix?: string;
 }
 
 export interface describeVisualForceResponse {
-    result : DescribeVisualForceResult;
+    result: DescribeVisualForceResult;
 }
 
 export interface describeWorkitemActions {
-    workitemIds? : ID | ID[];
+    workitemIds?: ID | ID[];
 }
 
 export interface describeWorkitemActionsResponse {
-    result? : DescribeWorkitemActionResult | DescribeWorkitemActionResult[];
+    result?: DescribeWorkitemActionResult | DescribeWorkitemActionResult[];
 }
 
 export interface retrieve {
-    fieldList : string;
-    sObjectType : string;
-    ids? : ID | ID[];
+    fieldList: string;
+    sObjectType: string;
+    ids?: ID | ID[];
 }
 
 export interface retrieveResponse {
-    result? : sObject | sObject[];
+    result?: sObject | sObject[];
 }
 
 export interface retrieveDefaultValues {
-    sObjectType : string;
-    recordTypeId? : ID;
-    fieldList? : string;
+    sObjectType: string;
+    recordTypeId?: ID;
+    fieldList?: string;
 }
 
 export interface retrieveDefaultValuesResponse {
-    result? : sObject;
+    result?: sObject;
 }
 
 export interface convertLead {
-    leadConverts? : LeadConvert | LeadConvert[];
+    leadConverts?: LeadConvert | LeadConvert[];
 }
 
 export interface convertLeadResponse {
-    result? : LeadConvertResult | LeadConvertResult[];
+    result?: LeadConvertResult | LeadConvertResult[];
 }
 
 export interface addCampaignMember {
-    AddCampaignMemberOptions : AddCampaignMemberOptions;
+    AddCampaignMemberOptions: AddCampaignMemberOptions;
 }
 
 export interface addCampaignMemberResponse {
-    result : AddCampaignMemberResult;
+    result: AddCampaignMemberResult;
 }
 
 export interface getUpdated {
-    sObjectType : string;
-    startDate : Date;
-    endDate : Date;
+    sObjectType: string;
+    startDate: Date;
+    endDate: Date;
 }
 
 export interface getUpdatedResponse {
-    result : GetUpdatedResult;
+    result: GetUpdatedResult;
 }
 
 export interface getDeleted {
-    sObjectType : string;
-    startDate : Date;
-    endDate : Date;
+    sObjectType: string;
+    startDate: Date;
+    endDate: Date;
 }
 
 export interface getDeletedResponse {
-    result : GetDeletedResult;
+    result: GetDeletedResult;
 }
 
 export interface impersonateUser {
-    userIds? : ID | ID[];
+    userIds?: ID | ID[];
 }
 
 export interface impersonateUserResponse {
-    result? : ImpersonateUserResult | ImpersonateUserResult[];
+    result?: ImpersonateUserResult | ImpersonateUserResult[];
 }
 
 export interface logout {
@@ -4265,324 +4268,324 @@ export interface logoutResponse {
 }
 
 export interface invalidateSessions {
-    sessionIds? : string | string[];
+    sessionIds?: string | string[];
 }
 
 export interface invalidateSessionsResponse {
-    result? : InvalidateSessionsResult | InvalidateSessionsResult[];
+    result?: InvalidateSessionsResult | InvalidateSessionsResult[];
 }
 
 export interface canViewFlow {
-    input : FlowAccessInput;
+    input: FlowAccessInput;
 }
 
 export interface canViewFlowResponse {
-    result : CanViewFlowResult;
+    result: CanViewFlowResult;
 }
 
 export interface startFlowInterview {
-    request : StartFlowInterviewRequest;
+    request: StartFlowInterviewRequest;
 }
 
 export interface startFlowInterviewResponse {
-    result : NavigateFlowInterviewResult;
+    result: NavigateFlowInterviewResult;
 }
 
 export interface resumeFlowInterview {
-    request : ResumeFlowInterviewRequest;
+    request: ResumeFlowInterviewRequest;
 }
 
 export interface resumeFlowInterviewResponse {
-    result : NavigateFlowInterviewResult;
+    result: NavigateFlowInterviewResult;
 }
 
 export interface runFlowTest {
-    request : RunFlowTestInput;
+    request: RunFlowTestInput;
 }
 
 export interface runFlowTestResponse {
-    result? : RunFlowTestResult | RunFlowTestResult[];
+    result?: RunFlowTestResult | RunFlowTestResult[];
 }
 
 export interface generateFlowTest {
-    request : string;
+    request: string;
 }
 
 export interface generateFlowTestResponse {
-    result : GenerateFlowTestResult;
+    result: GenerateFlowTestResult;
 }
 
 export interface getFlowInterviewHistory {
-    request : GetFlowInterviewHistoryRequest;
+    request: GetFlowInterviewHistoryRequest;
 }
 
 export interface getFlowInterviewHistoryResponse {
-    result : NavigateFlowInterviewResult;
+    result: NavigateFlowInterviewResult;
 }
 
 export interface navigateFlowInterview {
-    request : NavigateFlowInterviewRequest;
+    request: NavigateFlowInterviewRequest;
 }
 
 export interface navigateFlowInterviewResponse {
-    result : NavigateFlowInterviewResult;
+    result: NavigateFlowInterviewResult;
 }
 
 export interface query {
-    queryString : string;
+    queryString: string;
 }
 
 export interface queryResponse {
-    result : QueryResult;
+    result: QueryResult;
 }
 
 export interface queryAll {
-    queryString : string;
+    queryString: string;
 }
 
 export interface queryAllResponse {
-    result : QueryResult;
+    result: QueryResult;
 }
 
 export interface queryMore {
-    queryLocator : QueryLocator;
+    queryLocator: QueryLocator;
 }
 
 export interface queryMoreResponse {
-    result : QueryResult;
+    result: QueryResult;
 }
 
 export interface setupBriefcase {
 }
 
 export interface setupBriefcaseResponse {
-    result : SetupBriefcaseResult;
+    result: SetupBriefcaseResult;
 }
 
 export interface search {
-    searchString : string;
+    searchString: string;
 }
 
 export interface searchResponse {
-    result : SearchResult;
+    result: SearchResult;
 }
 
 export interface outlookSearch {
-    searchExpr : string;
-    contextString : string;
+    searchExpr: string;
+    contextString: string;
 }
 
 export interface outlookSearchResponse {
-    result : OutlookSearchResult;
+    result: OutlookSearchResult;
 }
 
 export interface outlookDescribe {
 }
 
 export interface outlookDescribeResponse {
-    result : OutlookDescribeResult;
+    result: OutlookDescribeResult;
 }
 
 export interface getServerTimestamp {
 }
 
 export interface getServerTimestampResponse {
-    result : GetServerTimestampResult;
+    result: GetServerTimestampResult;
 }
 
 export interface setPassword {
-    userId : ID;
-    password : string;
+    userId: ID;
+    password: string;
 }
 
 export interface setPasswordResponse {
-    result : SetPasswordResult;
+    result: SetPasswordResult;
 }
 
 export interface changeOwnPassword {
-    oldPassword : string;
-    newPassword : string;
+    oldPassword: string;
+    newPassword: string;
 }
 
 export interface changeOwnPasswordResponse {
-    result : ChangeOwnPasswordResult;
+    result: ChangeOwnPasswordResult;
 }
 
 export interface resetPassword {
-    userId : ID;
+    userId: ID;
 }
 
 export interface resetPasswordResponse {
-    result : ResetPasswordResult;
+    result: ResetPasswordResult;
 }
 
 export interface getAccessInfo {
 }
 
 export interface getAccessInfoResponse {
-    result : GetAccessInfoResult;
+    result: GetAccessInfoResult;
 }
 
 export interface getUserInfo {
 }
 
 export interface getUserInfoResponse {
-    result : GetUserInfoResult;
+    result: GetUserInfoResult;
 }
 
 export interface activate {
-    ids? : ID | ID[];
+    ids?: ID | ID[];
 }
 
 export interface activateResponse {
-    result? : ActivateResult | ActivateResult[];
+    result?: ActivateResult | ActivateResult[];
 }
 
 export interface generateJwtToken {
-    claims? : ClaimsMapping | ClaimsMapping[];
+    claims?: ClaimsMapping | ClaimsMapping[];
 }
 
 export interface generateJwtTokenResponse {
-    result : string;
+    result: string;
 }
 
 export interface SessionHeader {
-    sessionId : string;
+    sessionId: string;
 }
 
 export interface LoginScopeHeader {
-    organizationId : ID;
-    portalId? : ID;
+    organizationId: ID;
+    portalId?: ID;
 }
 
 export interface CallOptions {
-    client? : string;
-    defaultNamespace? : string;
-    returnFieldDataTypes? : boolean;
-    clientLog : string;
-    debugExceptions : boolean;
-    platform : string;
-    remoteApplication : string;
-    uiRequestId : string;
-    perfOption : PerfOption;
+    client?: string;
+    defaultNamespace?: string;
+    returnFieldDataTypes?: boolean;
+    clientLog: string;
+    debugExceptions: boolean;
+    platform: string;
+    remoteApplication: string;
+    uiRequestId: string;
+    perfOption: PerfOption;
 }
 
 export interface QueryOptions {
-    batchSize? : number;
-    filterLanguage? : string;
-    scope : queryOptionsScope;
+    batchSize?: number;
+    filterLanguage?: string;
+    scope: queryOptionsScope;
 }
 
 export interface APIPerformanceInfo {
-    encodedIntervalTimerTree? : string;
-    handlerMetrics? : NameValuePair | NameValuePair[];
+    encodedIntervalTimerTree?: string;
+    handlerMetrics?: NameValuePair | NameValuePair[];
 }
 
 export interface MetadataVersionCheck {
-    facts? : Fact | Fact[];
-    operation : Operation;
+    facts?: Fact | Fact[];
+    operation: Operation;
 }
 
 export interface DebuggingHeader {
-    categories? : LogInfo | LogInfo[];
-    debugLevel : DebugLevel;
+    categories?: LogInfo | LogInfo[];
+    debugLevel: DebugLevel;
 }
 
 export interface DebuggingInfo {
-    debugLog : string;
+    debugLog: string;
 }
 
 export interface PackageVersionHeader {
-    packageVersions? : PackageVersion | PackageVersion[];
+    packageVersions?: PackageVersion | PackageVersion[];
 }
 
 export interface AllowFieldTruncationHeader {
-    allowFieldTruncation : boolean;
+    allowFieldTruncation: boolean;
 }
 
 export interface DisableFeedTrackingHeader {
-    disableFeedTracking : boolean;
+    disableFeedTracking: boolean;
 }
 
 export interface StreamingEnabledHeader {
-    streamingEnabled : boolean;
+    streamingEnabled: boolean;
 }
 
 export interface AllOrNoneHeader {
-    allOrNone : boolean;
+    allOrNone: boolean;
 }
 
 export interface CurrencyConversionHeader {
-    skipCurrencyConversion : boolean;
+    skipCurrencyConversion: boolean;
 }
 
 export interface DuplicateRuleHeader {
-    allowSave : boolean;
-    includeRecordDetails : boolean;
-    runAsCurrentUser : boolean;
+    allowSave: boolean;
+    includeRecordDetails: boolean;
+    runAsCurrentUser: boolean;
 }
 
 export interface LimitInfoHeader {
-    limitInfo? : LimitInfo | LimitInfo[];
+    limitInfo?: LimitInfo | LimitInfo[];
 }
 
 export interface PatchHeader {
-    patch : boolean;
+    patch: boolean;
 }
 
 export interface match {
-    sObjects? : sObject | sObject[];
-    matchOptions : MatchOptions;
+    sObjects?: sObject | sObject[];
+    matchOptions: MatchOptions;
 }
 
 export interface matchResponse {
-    result? : MatchResult | MatchResult[];
+    result?: MatchResult | MatchResult[];
 }
 
 export interface MruHeader {
-    updateMru : boolean;
+    updateMru: boolean;
 }
 
 export interface EmailHeader {
-    triggerAutoResponseEmail : boolean;
-    triggerOtherEmail : boolean;
-    triggerUserEmail : boolean;
+    triggerAutoResponseEmail: boolean;
+    triggerOtherEmail: boolean;
+    triggerUserEmail: boolean;
 }
 
 export interface AssignmentRuleHeader {
-    assignmentRuleId? : ID;
-    useDefaultRule? : boolean;
+    assignmentRuleId?: ID;
+    useDefaultRule?: boolean;
 }
 
 export interface ConditionalRequestHeader {
-    ifModifiedBefore? : Date;
-    ifModifiedSince? : Date;
-    ifModifiedBeforeArray? : Date | Date[];
+    ifModifiedBefore?: Date;
+    ifModifiedSince?: Date;
+    ifModifiedBeforeArray?: Date | Date[];
 }
 
 export interface UserTerritoryDeleteHeader {
-    transferToUserId? : ID;
+    transferToUserId?: ID;
 }
 
 export interface PartnerNetworkHeader {
-    connectionId? : ID;
-    partnerEntityIds? : ID | ID[];
-    parentEntityIds? : ID | ID[];
+    connectionId?: ID;
+    partnerEntityIds?: ID | ID[];
+    parentEntityIds?: ID | ID[];
 }
 
 export interface LocaleOptions {
-    language? : string;
-    localizeErrors? : boolean;
+    language?: string;
+    localizeErrors?: boolean;
 }
 
 export interface OwnerChangeOptions {
-    options? : OwnerChangeOption | OwnerChangeOption[];
+    options?: OwnerChangeOption | OwnerChangeOption[];
 }
 
 export interface CommonEventRequestInformation {
-    appName : string;
-    entityId : string;
-    requestOrigin : RequestOrigin;
+    appName: string;
+    entityId: string;
+    requestOrigin: RequestOrigin;
 }
 
 export type ExceptionCode = 'ADAPTER_ERROR' 
@@ -4852,46 +4855,46 @@ export type ExceptionCode = 'ADAPTER_ERROR'
 export type FaultCode = any;
 
 export interface ApiFault {
-    exceptionCode : ExceptionCode;
-    exceptionMessage : string;
-    extendedErrorDetails? : ExtendedErrorDetails | ExtendedErrorDetails[];
-    upgradeURL? : string;
-    upgradeMessage? : string;
+    exceptionCode: ExceptionCode;
+    exceptionMessage: string;
+    extendedErrorDetails?: ExtendedErrorDetails | ExtendedErrorDetails[];
+    upgradeURL?: string;
+    upgradeMessage?: string;
 }
 
-export interface ApiQueryFault extends Fns_ApiFault {
-    row : number;
-    column : number;
+export interface ApiQueryFault extends fns_ApiFault {
+    row: number;
+    column: number;
 }
 
-export interface LoginFault extends Fns_ApiFault {
+export interface LoginFault extends fns_ApiFault {
 }
 
-export interface InvalidQueryLocatorFault extends Fns_ApiFault {
+export interface InvalidQueryLocatorFault extends fns_ApiFault {
 }
 
-export interface InvalidNewPasswordFault extends Fns_ApiFault {
+export interface InvalidNewPasswordFault extends fns_ApiFault {
 }
 
-export interface InvalidOldPasswordFault extends Fns_ApiFault {
+export interface InvalidOldPasswordFault extends fns_ApiFault {
 }
 
-export interface InvalidIdFault extends Fns_ApiFault {
+export interface InvalidIdFault extends fns_ApiFault {
 }
 
-export interface UnexpectedErrorFault extends Fns_ApiFault {
+export interface UnexpectedErrorFault extends fns_ApiFault {
 }
 
-export interface InvalidFieldFault extends Fns_ApiQueryFault {
+export interface InvalidFieldFault extends fns_ApiQueryFault {
 }
 
-export interface InvalidSObjectFault extends Fns_ApiQueryFault {
+export interface InvalidSObjectFault extends fns_ApiQueryFault {
 }
 
-export interface MalformedQueryFault extends Fns_ApiQueryFault {
+export interface MalformedQueryFault extends fns_ApiQueryFault {
 }
 
-export interface MalformedSearchFault extends Fns_ApiQueryFault {
+export interface MalformedSearchFault extends fns_ApiQueryFault {
 }
 
 export interface fault {
