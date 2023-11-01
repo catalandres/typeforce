@@ -1,64 +1,62 @@
-export interface Properties {
-    [key: string]: string;
-}
+export type Properties = Record<string, string>;
 
-export interface Node {
-    $?: Properties;
-}
+export type Node = {
+	$?: Properties;
+};
 
-export interface NodeWithAttributes extends Node {
-    $: Properties;
-}    
+export type NodeWithAttributes = {
+	$: Properties;
+} & Node;
 
-export interface SequenceNode extends NodeWithAttributes {
-    element: NodeWithAttributes[] | NodeWithAttributes;
-}    
+export type SequenceNode = {
+	element: NodeWithAttributes[] | NodeWithAttributes;
+} & NodeWithAttributes;
 
-export interface ExtensionNode extends NodeWithAttributes {
-    sequence: SequenceNode;
-}    
+export type ExtensionNode = {
+	sequence: SequenceNode;
+} & NodeWithAttributes;
 
-export interface ComplexContentNode extends Node {
-    extension: ExtensionNode;
-}    
+export type ComplexContentNode = {
+	extension: ExtensionNode;
+} & Node;
 
-export interface ComplexTypeNode extends Node {}
+export type ComplexTypeNode = Record<string, unknown> & Node;
 
-export interface ComplexTypeNodeWithSequence extends ComplexTypeNode {
-    sequence? : SequenceNode;
-}
+export type ComplexTypeNodeWithSequence = {
+	sequence?: SequenceNode;
+} & ComplexTypeNode;
 
-export interface ComplexTypeNodeWithComplexContent extends ComplexTypeNode {
-    complexContent : ComplexContentNode;
-}        
+export type ComplexTypeNodeWithComplexContent = {
+	complexContent: ComplexContentNode;
+} & ComplexTypeNode;
 
-export interface RestrictionNode extends NodeWithAttributes {
-    enumeration: NodeWithAttributes[] | NodeWithAttributes;
-}
+export type RestrictionNode = {
+	enumeration: NodeWithAttributes[] | NodeWithAttributes;
+} & NodeWithAttributes;
 
-export interface SimpleTypeNode extends NodeWithAttributes {
-    restriction : RestrictionNode;
-}        
+export type SimpleTypeNode = {
+	restriction: RestrictionNode;
+} & NodeWithAttributes;
 
-export interface ElementNode extends NodeWithAttributes {
-    complexType : ComplexTypeNodeWithSequence;
-}        
+export type ElementNode = {
+	complexType: ComplexTypeNodeWithSequence;
+} & NodeWithAttributes;
 
-export interface SchemaNode extends NodeWithAttributes {
-    complexType : ComplexTypeNode[] | ComplexTypeNode;
-    simpleType : SimpleTypeNode[] | SimpleTypeNode;
-    element : ElementNode[] | ElementNode;
-}            
+export type SchemaNode = {
+	complexType: ComplexTypeNode[] | ComplexTypeNode;
+	simpleType: SimpleTypeNode[] | SimpleTypeNode;
+	element: ElementNode[] | ElementNode;
+} & NodeWithAttributes;
 
-export interface TypesNode extends Node {
-    schema: SchemaNode | SchemaNode[];
-}                
+export type TypesNode = {
+	schema: SchemaNode | SchemaNode[];
+} & Node;
 
-export interface DefinitionsNode extends NodeWithAttributes {
-    types: TypesNode;
-    message: any;
-    portType: any;
-    binding: any;
-    service: any;
-}                    
+export type DefinitionsNode = {
+	types: TypesNode;
+	message: any;
+	portType: any;
+	binding: any;
+	service: any;
+} & NodeWithAttributes;
 

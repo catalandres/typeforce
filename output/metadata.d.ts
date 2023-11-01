@@ -20845,163 +20845,163 @@ export interface SessionHeader {
     sessionId : string;
 }
 
-export interface CancelDeploy {
+export interface cancelDeploy {
     String : ID;
 }
 
-export interface CancelDeployResponse {
+export interface cancelDeployResponse {
     result : CancelDeployResult;
 }
 
-export interface CheckDeployStatus {
+export interface checkDeployStatus {
     asyncProcessId : ID;
     includeDetails : boolean;
 }
 
-export interface CheckDeployStatusResponse {
+export interface checkDeployStatusResponse {
     result : DeployResult;
 }
 
-export interface CheckRetrieveStatus {
+export interface checkRetrieveStatus {
     asyncProcessId : ID;
     includeZip : boolean;
 }
 
-export interface CheckRetrieveStatusResponse {
+export interface checkRetrieveStatusResponse {
     result : RetrieveResult;
 }
 
-export interface CheckStatus {
+export interface checkStatus {
     asyncProcessId? : ID | ID[];
 }
 
-export interface CheckStatusResponse {
+export interface checkStatusResponse {
     result? : AsyncResult | AsyncResult[];
 }
 
-export interface Create {
+export interface create {
     metadata? : Metadata | Metadata[];
 }
 
-export interface CreateResponse {
+export interface createResponse {
     result? : AsyncResult | AsyncResult[];
 }
 
-export interface CreateMetadata {
+export interface createMetadata {
     metadata? : Metadata | Metadata[];
 }
 
-export interface CreateMetadataResponse {
+export interface createMetadataResponse {
     result? : SaveResult | SaveResult[];
 }
 
-export interface Delete {
+export interface delete {
     metadata? : Metadata | Metadata[];
 }
 
-export interface DeleteResponse {
+export interface deleteResponse {
     result? : AsyncResult | AsyncResult[];
 }
 
-export interface DeleteMetadata {
+export interface deleteMetadata {
     type : string;
     fullNames? : string | string[];
 }
 
-export interface DeleteMetadataResponse {
+export interface deleteMetadataResponse {
     result? : DeleteResult | DeleteResult[];
 }
 
-export interface Deploy {
+export interface deploy {
     ZipFile : string;
     DeployOptions : DeployOptions;
 }
 
-export interface DeployResponse {
+export interface deployResponse {
     result : AsyncResult;
 }
 
-export interface DeployRecentValidation {
+export interface deployRecentValidation {
     validationId : ID;
 }
 
-export interface DeployRecentValidationResponse {
+export interface deployRecentValidationResponse {
     result : string;
 }
 
-export interface DescribeMetadata {
+export interface describeMetadata {
     asOfVersion : number;
 }
 
-export interface DescribeMetadataResponse {
+export interface describeMetadataResponse {
     result : DescribeMetadataResult;
 }
 
-export interface DescribeValueType {
+export interface describeValueType {
     type : string;
 }
 
-export interface DescribeValueTypeResponse {
+export interface describeValueTypeResponse {
     result : DescribeValueTypeResult;
 }
 
-export interface ListMetadata {
+export interface listMetadata {
     queries? : ListMetadataQuery | ListMetadataQuery[];
     asOfVersion : number;
 }
 
-export interface ListMetadataResponse {
+export interface listMetadataResponse {
     result? : FileProperties | FileProperties[];
 }
 
-export interface ReadMetadata {
+export interface readMetadata {
     type : string;
     fullNames? : string | string[];
 }
 
-export interface ReadMetadataResponse {
+export interface readMetadataResponse {
     result : ReadResult;
 }
 
-export interface RenameMetadata {
+export interface renameMetadata {
     type : string;
     oldFullName : string;
     newFullName : string;
 }
 
-export interface RenameMetadataResponse {
+export interface renameMetadataResponse {
     result : SaveResult;
 }
 
-export interface Retrieve {
+export interface retrieve {
     retrieveRequest : RetrieveRequest;
 }
 
-export interface RetrieveResponse {
+export interface retrieveResponse {
     result : AsyncResult;
 }
 
-export interface Update {
+export interface update {
     UpdateMetadata? : UpdateMetadata | UpdateMetadata[];
 }
 
-export interface UpdateResponse {
+export interface updateResponse {
     result? : AsyncResult | AsyncResult[];
 }
 
-export interface UpdateMetadata {
+export interface updateMetadata {
     metadata? : Metadata | Metadata[];
 }
 
-export interface UpdateMetadataResponse {
+export interface updateMetadataResponse {
     result? : SaveResult | SaveResult[];
 }
 
-export interface UpsertMetadata {
+export interface upsertMetadata {
     metadata? : Metadata | Metadata[];
 }
 
-export interface UpsertMetadataResponse {
+export interface upsertMetadataResponse {
     result? : UpsertResult | UpsertResult[];
 }
 

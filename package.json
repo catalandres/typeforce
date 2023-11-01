@@ -4,7 +4,13 @@
   "type": "module",
   "devDependencies": {
     "@types/xml2js": "^0.4.13",
-    "bun-types": "^1.0.7"
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "bun-types": "^1.0.7",
+    "eslint": "^8.52.0",
+    "eslint-config-xo": "^0.43.1",
+    "eslint-config-xo-typescript": "^1.0.1",
+    "typescript": "^5.2.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

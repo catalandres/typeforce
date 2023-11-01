@@ -14006,7 +14006,7 @@ export interface SubscriberPackageRemoteSiteSettings {
     settings? : SubscriberPackageRemoteSiteSetting | SubscriberPackageRemoteSiteSetting[];
 }
 
-export interface SObject {
+export interface sObject {
     fieldsToNull? : string | string[];
     Id? : ID;
 }
@@ -36314,13 +36314,13 @@ export type ShareAccessLevel = 'Read'
       | 'Edit' 
       | 'All';
 
-export type OrderByDirection = 'ascending' 
+export type orderByDirection = 'ascending' 
       | 'descending';
 
-export type OrderByNullsPosition = 'first' 
+export type orderByNullsPosition = 'first' 
       | 'last';
 
-export type SoqlOperator = 'equals' 
+export type soqlOperator = 'equals' 
       | 'excludes' 
       | 'greaterThan' 
       | 'greaterThanOrEqualTo' 
@@ -36334,7 +36334,7 @@ export type SoqlOperator = 'equals'
       | 'within' 
       | 'notLike';
 
-export type SoqlConjunction = 'and' 
+export type soqlConjunction = 'and' 
       | 'or';
 
 export type FlowProcessType = 'AutoLaunchedFlow' 
@@ -45798,204 +45798,204 @@ export interface SessionHeader {
     sessionId : string;
 }
 
-export interface ChangeOwnPassword {
+export interface changeOwnPassword {
     oldPassword : string;
     newPassword : string;
 }
 
-export interface ChangeOwnPasswordResponse {
+export interface changeOwnPasswordResponse {
     result : ChangeOwnPasswordResult;
 }
 
-export interface Create {
+export interface create {
     sObjects? : sObject | sObject[];
 }
 
-export interface CreateResponse {
+export interface createResponse {
     result? : SaveResult | SaveResult[];
 }
 
-export interface Delete {
+export interface delete {
     ids? : ID | ID[];
 }
 
-export interface DeleteResponse {
+export interface deleteResponse {
     result? : DeleteResult | DeleteResult[];
 }
 
-export interface DescribeGlobal {
+export interface describeGlobal {
 }
 
-export interface DescribeGlobalResponse {
+export interface describeGlobalResponse {
     result : DescribeGlobalResult;
 }
 
-export interface DescribeLayout {
+export interface describeLayout {
     type : string;
     layoutName : string;
     recordTypeIds? : string | string[];
 }
 
-export interface DescribeLayoutResponse {
+export interface describeLayoutResponse {
     result : DescribeLayoutResult;
 }
 
-export interface DescribeSObject {
+export interface describeSObject {
     type : string;
 }
 
-export interface DescribeSObjectResponse {
+export interface describeSObjectResponse {
     result : DescribeSObjectResult;
 }
 
-export interface DescribeSObjects {
+export interface describeSObjects {
     types? : string | string[];
 }
 
-export interface DescribeSObjectsResponse {
+export interface describeSObjectsResponse {
     result? : DescribeSObjectResult | DescribeSObjectResult[];
 }
 
-export interface DescribeSchema {
+export interface describeSchema {
     type : string;
 }
 
-export interface DescribeSchemaResponse {
+export interface describeSchemaResponse {
     result : DescribeSchemaResult;
 }
 
-export interface DescribeSoqlListViews {
+export interface describeSoqlListViews {
     request : DescribeSoqlListViewsRequest;
 }
 
-export interface DescribeSoqlListViewsResponse {
+export interface describeSoqlListViewsResponse {
     result : DescribeSoqlListViewResult;
 }
 
-export interface DescribeValueType {
+export interface describeValueType {
     type : string;
 }
 
-export interface DescribeValueTypeResponse {
+export interface describeValueTypeResponse {
     result : DescribeValueTypeResult;
 }
 
-export interface DescribeWorkitemActions {
+export interface describeWorkitemActions {
     workitemIds? : ID | ID[];
 }
 
-export interface DescribeWorkitemActionsResponse {
+export interface describeWorkitemActionsResponse {
     result? : DescribeWorkitemActionResult | DescribeWorkitemActionResult[];
 }
 
-export interface ExecuteAnonymous {
+export interface executeAnonymous {
     String : string;
 }
 
-export interface ExecuteAnonymousResponse {
+export interface executeAnonymousResponse {
     result : ExecuteAnonymousResult;
 }
 
-export interface GetDeleted {
+export interface getDeleted {
     sObjectType : string;
     start : Date;
     end : Date;
 }
 
-export interface GetDeletedResponse {
+export interface getDeletedResponse {
     result : GetDeletedResult;
 }
 
-export interface GetServerTimestamp {
+export interface getServerTimestamp {
 }
 
-export interface GetServerTimestampResponse {
+export interface getServerTimestampResponse {
     result : GetServerTimestampResult;
 }
 
-export interface GetUpdated {
+export interface getUpdated {
     sObjectType : string;
     start : Date;
     end : Date;
 }
 
-export interface GetUpdatedResponse {
+export interface getUpdatedResponse {
     result : GetUpdatedResult;
 }
 
-export interface GetUserInfo {
+export interface getUserInfo {
 }
 
-export interface GetUserInfoResponse {
+export interface getUserInfoResponse {
     result : GetUserInfoResult;
 }
 
-export interface InvalidateSessions {
+export interface invalidateSessions {
     ArrayList? : string | string[];
 }
 
-export interface InvalidateSessionsResponse {
+export interface invalidateSessionsResponse {
     result? : InvalidateSessionsResult | InvalidateSessionsResult[];
 }
 
-export interface Login {
+export interface login {
     username : string;
     password : string;
 }
 
-export interface LoginResponse {
+export interface loginResponse {
     result : LoginResult;
 }
 
-export interface Logout {
+export interface logout {
 }
 
-export interface LogoutResponse {
+export interface logoutResponse {
 }
 
-export interface Query {
+export interface query {
     queryString : string;
 }
 
-export interface QueryResponse {
+export interface queryResponse {
     result : QueryResult;
 }
 
-export interface QueryAll {
+export interface queryAll {
     queryString : string;
 }
 
-export interface QueryAllResponse {
+export interface queryAllResponse {
     result : QueryResult;
 }
 
-export interface QueryMore {
+export interface queryMore {
     queryLocator : string;
 }
 
-export interface QueryMoreResponse {
+export interface queryMoreResponse {
     result : QueryResult;
 }
 
-export interface Retrieve {
+export interface retrieve {
     select : string;
     type : string;
     ids? : ID | ID[];
 }
 
-export interface RetrieveResponse {
+export interface retrieveResponse {
     result? : sObject | sObject[];
 }
 
-export interface RunTests {
+export interface runTests {
     RunTestsRequest : RunTestsRequest;
 }
 
-export interface RunTestsResponse {
+export interface runTestsResponse {
     result : RunTestsResult;
 }
 
-export interface RunTestsAsynchronous {
+export interface runTestsAsynchronous {
     classids : string;
     suiteids : string;
     maxFailedTests : number;
@@ -46006,41 +46006,41 @@ export interface RunTestsAsynchronous {
     skipCodeCoverage : boolean;
 }
 
-export interface RunTestsAsynchronousResponse {
+export interface runTestsAsynchronousResponse {
     result : string;
 }
 
-export interface Search {
+export interface search {
     searchString : string;
 }
 
-export interface SearchResponse {
+export interface searchResponse {
     result : SearchResult;
 }
 
-export interface SetPassword {
+export interface setPassword {
     userId : string;
     password : string;
 }
 
-export interface SetPasswordResponse {
+export interface setPasswordResponse {
     result : SetPasswordResult;
 }
 
-export interface Update {
+export interface update {
     sObjects? : sObject | sObject[];
 }
 
-export interface UpdateResponse {
+export interface updateResponse {
     result? : SaveResult | SaveResult[];
 }
 
-export interface Upsert {
+export interface upsert {
     fieldName : string;
     entities? : sObject | sObject[];
 }
 
-export interface UpsertResponse {
+export interface upsertResponse {
     result? : UpsertResult | UpsertResult[];
 }
 

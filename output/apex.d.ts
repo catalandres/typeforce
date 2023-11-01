@@ -282,51 +282,51 @@ export interface SessionHeader {
     sessionId : string;
 }
 
-export interface CompileAndTest {
+export interface compileAndTest {
     CompileAndTestRequest : CompileAndTestRequest;
 }
 
-export interface CompileAndTestResponse {
+export interface compileAndTestResponse {
     result : CompileAndTestResult;
 }
 
-export interface CompileClasses {
+export interface compileClasses {
     scripts? : string | string[];
 }
 
-export interface CompileClassesResponse {
+export interface compileClassesResponse {
     result? : CompileClassResult | CompileClassResult[];
 }
 
-export interface CompileTriggers {
+export interface compileTriggers {
     scripts? : string | string[];
 }
 
-export interface CompileTriggersResponse {
+export interface compileTriggersResponse {
     result? : CompileTriggerResult | CompileTriggerResult[];
 }
 
-export interface ExecuteAnonymous {
+export interface executeAnonymous {
     String : string;
 }
 
-export interface ExecuteAnonymousResponse {
+export interface executeAnonymousResponse {
     result : ExecuteAnonymousResult;
 }
 
-export interface RunTests {
+export interface runTests {
     RunTestsRequest : RunTestsRequest;
 }
 
-export interface RunTestsResponse {
+export interface runTestsResponse {
     result : RunTestsResult;
 }
 
-export interface WsdlToApex {
+export interface wsdlToApex {
     info : WsdlToApexInfo;
 }
 
-export interface WsdlToApexResponse {
+export interface wsdlToApexResponse {
     result : WsdlToApexResult;
 }
 

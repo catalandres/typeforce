@@ -1,4 +1,4 @@
-export interface SObject {
+export interface sObject {
     type : string;
     fieldsToNull? : string | string[];
     Id? : ID;
@@ -6,11 +6,11 @@ export interface SObject {
 
 export type ID = string;
 
-export type Json = string;
+export type json = string;
 
 export type QueryLocator = string;
 
-export type BriefcaseType = 'BriefcaseAndAccount' 
+export type briefcaseType = 'BriefcaseAndAccount' 
       | 'BriefcaseAndActivity' 
       | 'BriefcaseAndOpportunity' 
       | 'Briefcase';
@@ -1168,7 +1168,7 @@ export type ShareAccessLevel = 'Read'
       | 'Edit' 
       | 'All';
 
-export type ChangeEventType = 'CREATE' 
+export type changeEventType = 'CREATE' 
       | 'UPDATE' 
       | 'DELETE' 
       | 'UNDELETE' 
@@ -1177,7 +1177,7 @@ export type ChangeEventType = 'CREATE'
       | 'GAP_DELETE' 
       | 'GAP_UNDELETE';
 
-export type FieldType = 'string' 
+export type fieldType = 'string' 
       | 'picklist' 
       | 'multipicklist' 
       | 'combobox' 
@@ -1205,7 +1205,7 @@ export type FieldType = 'string'
       | 'complexvalue' 
       | 'long';
 
-export type SoapType = 'tns_ID' 
+export type soapType = 'tns_ID' 
       | 'base64Binary' 
       | 'boolean' 
       | 'double' 
@@ -1232,7 +1232,7 @@ export type SoapType = 'tns_ID'
       | 'tns_StringList' 
       | 'tns_ChangeEventHeader';
 
-export type DifferenceType = 'DIFFERENT' 
+export type differenceType = 'DIFFERENT' 
       | 'NULL' 
       | 'SAME' 
       | 'SIMILAR';
@@ -1333,7 +1333,7 @@ export type WebLinkType = 'url'
       | 'page' 
       | 'flow';
 
-export type LayoutComponentType = 'ReportChart' 
+export type layoutComponentType = 'ReportChart' 
       | 'Field' 
       | 'Separator' 
       | 'SControl' 
@@ -1363,13 +1363,13 @@ export type AttachmentRetrievalOption = 'None'
       | 'MetadataOnly' 
       | 'MetadataWithBody';
 
-export type OrderByDirection = 'ascending' 
+export type orderByDirection = 'ascending' 
       | 'descending';
 
-export type OrderByNullsPosition = 'first' 
+export type orderByNullsPosition = 'first' 
       | 'last';
 
-export type SoqlOperator = 'equals' 
+export type soqlOperator = 'equals' 
       | 'excludes' 
       | 'greaterThan' 
       | 'greaterThanOrEqualTo' 
@@ -1383,7 +1383,7 @@ export type SoqlOperator = 'equals'
       | 'within' 
       | 'notLike';
 
-export type SoqlConjunction = 'and' 
+export type soqlConjunction = 'and' 
       | 'or';
 
 export type EmailSyncDirection = 'None' 
@@ -1428,7 +1428,7 @@ export type AppMenuType = 'AppSwitcher'
 export type UiType = 'Aloha' 
       | 'Lightning';
 
-export type ListViewIsSoqlCompatible = 'TRUE' 
+export type listViewIsSoqlCompatible = 'TRUE' 
       | 'FALSE' 
       | 'ALL';
 
@@ -1436,7 +1436,7 @@ export type PerfOption = 'NONE'
       | 'BASIC' 
       | 'DETAILED';
 
-export type QueryOptionsScope = 'Briefcase' 
+export type queryOptionsScope = 'Briefcase' 
       | 'Mine' 
       | 'Mru' 
       | 'ContactList';
@@ -1496,7 +1496,7 @@ export type OwnerChangeOptionType = 'EnforceNewOwnerHasReadAccess'
 export type RequestOrigin = 'ListViewMetadata' 
       | 'ListViewRecords';
 
-export interface Address extends Location {
+export interface address extends Location {
     city? : string;
     country? : string;
     countryCode? : string;
@@ -1507,7 +1507,7 @@ export interface Address extends Location {
     street? : string;
 }
 
-export interface Location {
+export interface location {
     latitude? : number;
     longitude? : number;
 }
@@ -3607,47 +3607,47 @@ export interface OwnerChangeOption {
     execute : boolean;
 }
 
-export interface FindDuplicates {
+export interface findDuplicates {
     sObjects? : sObject | sObject[];
 }
 
-export interface FindDuplicatesByIds {
+export interface findDuplicatesByIds {
     ids : ID | ID[];
 }
 
-export interface FindDuplicatesByIdsResponse {
+export interface findDuplicatesByIdsResponse {
     result? : FindDuplicatesResult | FindDuplicatesResult[];
 }
 
-export interface FindDuplicatesResponse {
+export interface findDuplicatesResponse {
     result? : FindDuplicatesResult | FindDuplicatesResult[];
 }
 
-export interface CreateSnapshot {
+export interface createSnapshot {
     sObject : string;
     forceFullSnapshot : boolean;
 }
 
-export interface CreateSnapshotResponse {
+export interface createSnapshotResponse {
     result : SnapshotResult;
 }
 
-export interface MoreSnapshot {
+export interface moreSnapshot {
     snapshotLocator : string;
 }
 
-export interface MoreSnapshotResponse {
+export interface moreSnapshotResponse {
     result : SnapshotResult;
 }
 
-export interface AckSnapshot {
+export interface ackSnapshot {
     snapshotId : ID;
 }
 
-export interface AckSnapshotResponse {
+export interface ackSnapshotResponse {
 }
 
-export interface SyncOfflineData {
+export interface syncOfflineData {
     reset : boolean;
     userRequested : boolean;
     syncStateId : string;
@@ -3657,293 +3657,293 @@ export interface SyncOfflineData {
     entitiesToSync? : string | string[];
 }
 
-export interface SyncOfflineDataResponse {
+export interface syncOfflineDataResponse {
     result : SyncOfflineDataResult;
 }
 
-export interface AckSyncOfflineData {
+export interface ackSyncOfflineData {
     token : string;
     syncStateId : string;
 }
 
-export interface AckSyncOfflineDataResponse {
+export interface ackSyncOfflineDataResponse {
 }
 
-export interface DescribeMobile {
+export interface describeMobile {
 }
 
-export interface DescribeMobileResponse {
+export interface describeMobileResponse {
     result : DescribeMobileResult;
 }
 
-export interface LoginXi {
+export interface loginXi {
     username : string;
 }
 
-export interface LoginXiResponse {
+export interface loginXiResponse {
     result : LoginResult;
 }
 
-export interface Login {
+export interface login {
     username : string;
     password : string;
 }
 
-export interface LoginResponse {
+export interface loginResponse {
     result : LoginResult;
 }
 
-export interface DescribeSObject {
+export interface describeSObject {
     sObjectType : string;
 }
 
-export interface DescribeSObjectResponse {
+export interface describeSObjectResponse {
     result? : DescribeSObjectResult;
 }
 
-export interface DiscoverSchemas {
+export interface discoverSchemas {
     scope : SchemaScope;
     typeFilter : SchemaType;
 }
 
-export interface DiscoverSchemasResponse {
+export interface discoverSchemasResponse {
     result? : DiscoverSchemasResult;
 }
 
-export interface DescribeSchema {
+export interface describeSchema {
     type : string;
 }
 
-export interface DescribeSchemaResponse {
+export interface describeSchemaResponse {
     result? : DescribeSchemaResult;
 }
 
-export interface DescribePicklists {
+export interface describePicklists {
     param : DescribePicklistsParam;
 }
 
-export interface DescribePicklistsResponse {
+export interface describePicklistsResponse {
     result? : DescribePicklistResult;
 }
 
-export interface CaptureCommonEvent {
+export interface captureCommonEvent {
     appName : string;
     eventValues : string;
     eventName : EventName;
 }
 
-export interface CaptureCommonEventResponse {
+export interface captureCommonEventResponse {
     result? : CommonEventResult;
 }
 
-export interface DescribeSObjects {
+export interface describeSObjects {
     sObjectType? : string;
 }
 
-export interface DescribeSObjectsResponse {
+export interface describeSObjectsResponse {
     result? : DescribeSObjectResult;
 }
 
-export interface DescribeGlobal {
+export interface describeGlobal {
 }
 
-export interface DescribeGlobalResponse {
+export interface describeGlobalResponse {
     result : DescribeGlobalResult;
 }
 
-export interface DescribeGlobalTheme {
+export interface describeGlobalTheme {
 }
 
-export interface DescribeGlobalThemeResponse {
+export interface describeGlobalThemeResponse {
     result : DescribeGlobalTheme;
 }
 
-export interface DescribeTheme {
+export interface describeTheme {
     sobjectType? : string | string[];
 }
 
-export interface DescribeThemeResponse {
+export interface describeThemeResponse {
     result : DescribeThemeResult;
 }
 
-export interface DescribeDataCategoryGroups {
+export interface describeDataCategoryGroups {
     sObjectType? : string;
 }
 
-export interface DescribeDataCategoryGroupsResponse {
+export interface describeDataCategoryGroupsResponse {
     result? : DescribeDataCategoryGroupResult;
 }
 
-export interface DescribeDataCategoryGroupStructures {
+export interface describeDataCategoryGroupStructures {
     pairs? : DataCategoryGroupSobjectTypePair;
     topCategoriesOnly : boolean;
 }
 
-export interface DescribeDataCategoryGroupStructuresResponse {
+export interface describeDataCategoryGroupStructuresResponse {
     result? : DescribeDataCategoryGroupStructureResult;
 }
 
-export interface DescribeDataCategoryMappings {
+export interface describeDataCategoryMappings {
 }
 
-export interface DescribeDataCategoryMappingsResponse {
+export interface describeDataCategoryMappingsResponse {
     result? : DescribeDataCategoryMappingResult;
 }
 
-export interface DescribeKnowledgeSettings {
+export interface describeKnowledgeSettings {
 }
 
-export interface DescribeKnowledgeSettingsResponse {
+export interface describeKnowledgeSettingsResponse {
     result : KnowledgeSettings;
 }
 
-export interface DescribeDuplicateRules {
+export interface describeDuplicateRules {
     sObjectType : string;
 }
 
-export interface DescribeDuplicateRulesResponse {
+export interface describeDuplicateRulesResponse {
     result? : DescribeDuplicateRuleResult | DescribeDuplicateRuleResult[];
 }
 
-export interface FtestPatch {
+export interface ftestPatch {
 }
 
-export interface FtestPatchResponse {
+export interface ftestPatchResponse {
     result : SaveResult;
 }
 
-export interface FtestPatchPreviousVersion {
+export interface ftestPatchPreviousVersion {
 }
 
-export interface FtestPatchPreviousVersionResponse {
+export interface ftestPatchPreviousVersionResponse {
     result : SaveResult;
 }
 
-export interface DescribeFlexiPages {
+export interface describeFlexiPages {
     flexiPages : string | string[];
     contexts? : FlexipageContext | FlexipageContext[];
 }
 
-export interface DescribeFlexiPagesResponse {
+export interface describeFlexiPagesResponse {
     result? : DescribeFlexiPageResult | DescribeFlexiPageResult[];
 }
 
-export interface DescribeAppMenu {
+export interface describeAppMenu {
     appMenuType : AppMenuType;
     networkId? : ID;
 }
 
-export interface DescribeAppMenuResponse {
+export interface describeAppMenuResponse {
     result? : DescribeAppMenuResult;
 }
 
-export interface DescribeLayout {
+export interface describeLayout {
     sObjectType : string;
     layoutName? : string;
     recordTypeIds? : ID | ID[];
 }
 
-export interface DescribeLayoutByUiType {
+export interface describeLayoutByUiType {
     sObjectType : string;
     layoutName? : string;
     recordTypeIds? : ID | ID[];
     uiType? : UiType;
 }
 
-export interface DescribeLayoutByUiTypeResponse {
+export interface describeLayoutByUiTypeResponse {
     result? : DescribeLayoutResult;
 }
 
-export interface DescribeLayoutResponse {
+export interface describeLayoutResponse {
     result? : DescribeLayoutResult;
 }
 
-export interface DescribeMiniLayout {
+export interface describeMiniLayout {
     sObjectType : string;
     layoutName? : string;
     recordTypeIds? : ID | ID[];
 }
 
-export interface DescribeMiniLayoutResponse {
+export interface describeMiniLayoutResponse {
     result? : DescribeMiniLayoutResult;
 }
 
-export interface DescribeCompactLayouts {
+export interface describeCompactLayouts {
     sObjectType : string;
     recordTypeIds? : ID | ID[];
 }
 
-export interface DescribeCompactLayoutsResponse {
+export interface describeCompactLayoutsResponse {
     result? : DescribeCompactLayoutsResult;
 }
 
-export interface DescribePrimaryCompactLayouts {
+export interface describePrimaryCompactLayouts {
     sObjectTypes : string | string[];
 }
 
-export interface DescribePrimaryCompactLayoutsResponse {
+export interface describePrimaryCompactLayoutsResponse {
     result? : DescribeCompactLayout | DescribeCompactLayout[];
 }
 
-export interface DescribePathAssistants {
+export interface describePathAssistants {
     sObjectType : string;
     picklistValue? : string;
     recordTypeIds? : ID | ID[];
 }
 
-export interface DescribePathAssistantsResponse {
+export interface describePathAssistantsResponse {
     result? : DescribePathAssistantsResult;
 }
 
-export interface DescribeApprovalLayout {
+export interface describeApprovalLayout {
     sObjectType : string;
     approvalProcessNames? : string | string[];
 }
 
-export interface DescribeApprovalLayoutResponse {
+export interface describeApprovalLayoutResponse {
     result? : DescribeApprovalLayoutResult;
 }
 
-export interface DescribeSoftphoneLayout {
+export interface describeSoftphoneLayout {
 }
 
-export interface DescribeSoftphoneLayoutResponse {
+export interface describeSoftphoneLayoutResponse {
     result? : DescribeSoftphoneLayoutResult;
 }
 
-export interface DescribeListViews {
+export interface describeListViews {
     sObjectType? : string | string[];
 }
 
-export interface DescribeListViewsResponse {
+export interface describeListViewsResponse {
     result? : DescribeListViewResult | DescribeListViewResult[];
 }
 
-export interface DescribeLookupLayouts {
+export interface describeLookupLayouts {
     sObjectType? : string | string[];
 }
 
-export interface DescribeLookupLayoutsResponse {
+export interface describeLookupLayoutsResponse {
     result? : DescribeLookupLayoutResult | DescribeLookupLayoutResult[];
 }
 
-export interface DescribeSoqlListViews {
+export interface describeSoqlListViews {
     request : DescribeSoqlListViewsRequest;
 }
 
-export interface DescribeSoqlListViewsResponse {
+export interface describeSoqlListViewsResponse {
     result : DescribeSoqlListViewResult;
 }
 
-export interface ExecuteListView {
+export interface executeListView {
     request : ExecuteListViewRequest;
 }
 
-export interface ExecuteListViewResponse {
+export interface executeListViewResponse {
     result? : ExecuteListViewResult;
 }
 
-export interface DescribeSObjectListViews {
+export interface describeSObjectListViews {
     sObjectType : string;
     recentsOnly : boolean;
     isSoqlCompatible : listViewIsSoqlCompatible;
@@ -3951,498 +3951,498 @@ export interface DescribeSObjectListViews {
     offset : number;
 }
 
-export interface DescribeSObjectListViewsResponse {
+export interface describeSObjectListViewsResponse {
     result : DescribeSoqlListViewResult;
 }
 
-export interface DescribeSearchLayouts {
+export interface describeSearchLayouts {
     sObjectType? : string | string[];
 }
 
-export interface DescribeSearchLayoutsResponse {
+export interface describeSearchLayoutsResponse {
     result? : DescribeSearchLayoutResult | DescribeSearchLayoutResult[];
 }
 
-export interface DescribeSearchScopeOrder {
+export interface describeSearchScopeOrder {
     includeRealTimeEntities? : boolean;
 }
 
-export interface DescribeSearchScopeOrderResponse {
+export interface describeSearchScopeOrderResponse {
     result? : DescribeSearchScopeOrderResult | DescribeSearchScopeOrderResult[];
 }
 
-export interface DescribeSearchableEntities {
+export interface describeSearchableEntities {
     includeOnlyEntitiesWithTabs : boolean;
 }
 
-export interface DescribeSearchableEntitiesResponse {
+export interface describeSearchableEntitiesResponse {
     result? : DescribeSearchableEntityResult | DescribeSearchableEntityResult[];
 }
 
-export interface DescribeTabs {
+export interface describeTabs {
 }
 
-export interface DescribeTabsResponse {
+export interface describeTabsResponse {
     result? : DescribeTabSetResult | DescribeTabSetResult[];
 }
 
-export interface DescribeAllTabs {
+export interface describeAllTabs {
 }
 
-export interface DescribeAllTabsResponse {
+export interface describeAllTabsResponse {
     result? : DescribeTab | DescribeTab[];
 }
 
-export interface DescribeNouns {
+export interface describeNouns {
     nouns? : string;
     onlyRenamed : boolean;
     includeFields : boolean;
 }
 
-export interface DescribeNounsResponse {
+export interface describeNounsResponse {
     result? : DescribeNounResult | DescribeNounResult[];
 }
 
-export interface Create {
+export interface create {
     sObjects? : sObject | sObject[];
 }
 
-export interface CreateResponse {
+export interface createResponse {
     result? : SaveResult | SaveResult[];
 }
 
-export interface SendEmail {
+export interface sendEmail {
     messages? : Email;
 }
 
-export interface SendEmailResponse {
+export interface sendEmailResponse {
     result? : SendEmailResult;
 }
 
-export interface RenderEmailTemplate {
+export interface renderEmailTemplate {
     renderRequests? : RenderEmailTemplateRequest;
 }
 
-export interface RenderEmailTemplateResponse {
+export interface renderEmailTemplateResponse {
     result? : RenderEmailTemplateResult;
 }
 
-export interface RenderStoredEmailTemplate {
+export interface renderStoredEmailTemplate {
     request : RenderStoredEmailTemplateRequest;
 }
 
-export interface RenderStoredEmailTemplateResponse {
+export interface renderStoredEmailTemplateResponse {
     result : RenderStoredEmailTemplateResult;
 }
 
-export interface SendEmailMessage {
+export interface sendEmailMessage {
     ids? : ID;
 }
 
-export interface SendEmailMessageResponse {
+export interface sendEmailMessageResponse {
     result? : SendEmailResult;
 }
 
-export interface EmailMerge {
+export interface emailMerge {
     template : ID;
     id : ID | ID[];
 }
 
-export interface EmailMergeResponse {
+export interface emailMergeResponse {
     result? : string | string[];
 }
 
-export interface Update {
+export interface update {
     sObjects? : sObject | sObject[];
 }
 
-export interface UpdateResponse {
+export interface updateResponse {
     result? : SaveResult | SaveResult[];
 }
 
-export interface Upsert {
+export interface upsert {
     externalIDFieldName : string;
     sObjects? : sObject | sObject[];
 }
 
-export interface UpsertResponse {
+export interface upsertResponse {
     result? : UpsertResult | UpsertResult[];
 }
 
-export interface Merge {
+export interface merge {
     request? : MergeRequest | MergeRequest[];
 }
 
-export interface MergeResponse {
+export interface mergeResponse {
     result? : MergeResult | MergeResult[];
 }
 
-export interface Delete {
+export interface delete {
     ids? : ID | ID[];
 }
 
-export interface DeleteResponse {
+export interface deleteResponse {
     result? : DeleteResult | DeleteResult[];
 }
 
-export interface DeleteByExample {
+export interface deleteByExample {
     sObjects? : sObject | sObject[];
 }
 
-export interface DeleteByExampleResponse {
+export interface deleteByExampleResponse {
     result? : DeleteByExampleResult | DeleteByExampleResult[];
 }
 
-export interface Undelete {
+export interface undelete {
     ids : ID | ID[];
 }
 
-export interface UndeleteResponse {
+export interface undeleteResponse {
     result : UndeleteResult | UndeleteResult[];
 }
 
-export interface UpdateSettings {
+export interface updateSettings {
     settingNames : string | string[];
     settingValues : string | string[];
 }
 
-export interface UpdateSettingsResponse {
+export interface updateSettingsResponse {
     result? : SaveResult | SaveResult[];
 }
 
-export interface EmptyRecycleBin {
+export interface emptyRecycleBin {
     ids : ID | ID[];
 }
 
-export interface EmptyRecycleBinResponse {
+export interface emptyRecycleBinResponse {
     result : EmptyRecycleBinResult | EmptyRecycleBinResult[];
 }
 
-export interface Process {
+export interface process {
     actions? : ProcessRequest | ProcessRequest[];
 }
 
-export interface ProcessResponse {
+export interface processResponse {
     result? : ProcessResult | ProcessResult[];
 }
 
-export interface PerformQuickActions {
+export interface performQuickActions {
     quickActions? : PerformQuickActionRequest | PerformQuickActionRequest[];
 }
 
-export interface PerformQuickActionsResponse {
+export interface performQuickActionsResponse {
     result? : PerformQuickActionResult | PerformQuickActionResult[];
 }
 
-export interface RetrieveMassQuickActionTemplates {
+export interface retrieveMassQuickActionTemplates {
     quickActionName : string;
     contextIds? : ID | ID[];
 }
 
-export interface RetrieveMassQuickActionTemplatesResponse {
+export interface retrieveMassQuickActionTemplatesResponse {
     result? : QuickActionTemplateResult | QuickActionTemplateResult[];
 }
 
-export interface RetrieveQuickActionTemplates {
+export interface retrieveQuickActionTemplates {
     quickActionNames? : string | string[];
     contextId? : ID;
 }
 
-export interface RetrieveQuickActionTemplatesResponse {
+export interface retrieveQuickActionTemplatesResponse {
     result? : QuickActionTemplateResult | QuickActionTemplateResult[];
 }
 
-export interface DescribeQuickActions {
+export interface describeQuickActions {
     quickActions? : string | string[];
 }
 
-export interface DescribeQuickActionsResponse {
+export interface describeQuickActionsResponse {
     result? : DescribeQuickActionResult | DescribeQuickActionResult[];
 }
 
-export interface DescribeQuickActionsForRecordType {
+export interface describeQuickActionsForRecordType {
     quickActions? : string | string[];
     recordTypeId : string;
 }
 
-export interface DescribeQuickActionsForRecordTypeResponse {
+export interface describeQuickActionsForRecordTypeResponse {
     result? : DescribeQuickActionResult | DescribeQuickActionResult[];
 }
 
-export interface DescribeAvailableQuickActions {
+export interface describeAvailableQuickActions {
     contextType? : string;
 }
 
-export interface DescribeAvailableQuickActionsResponse {
+export interface describeAvailableQuickActionsResponse {
     result? : DescribeAvailableQuickActionResult | DescribeAvailableQuickActionResult[];
 }
 
-export interface DescribeVisualForce {
+export interface describeVisualForce {
     includeAllDetails : boolean;
     namespacePrefix? : string;
 }
 
-export interface DescribeVisualForceResponse {
+export interface describeVisualForceResponse {
     result : DescribeVisualForceResult;
 }
 
-export interface DescribeWorkitemActions {
+export interface describeWorkitemActions {
     workitemIds? : ID | ID[];
 }
 
-export interface DescribeWorkitemActionsResponse {
+export interface describeWorkitemActionsResponse {
     result? : DescribeWorkitemActionResult | DescribeWorkitemActionResult[];
 }
 
-export interface Retrieve {
+export interface retrieve {
     fieldList : string;
     sObjectType : string;
     ids? : ID | ID[];
 }
 
-export interface RetrieveResponse {
+export interface retrieveResponse {
     result? : sObject | sObject[];
 }
 
-export interface RetrieveDefaultValues {
+export interface retrieveDefaultValues {
     sObjectType : string;
     recordTypeId? : ID;
     fieldList? : string;
 }
 
-export interface RetrieveDefaultValuesResponse {
+export interface retrieveDefaultValuesResponse {
     result? : sObject;
 }
 
-export interface ConvertLead {
+export interface convertLead {
     leadConverts? : LeadConvert | LeadConvert[];
 }
 
-export interface ConvertLeadResponse {
+export interface convertLeadResponse {
     result? : LeadConvertResult | LeadConvertResult[];
 }
 
-export interface AddCampaignMember {
+export interface addCampaignMember {
     AddCampaignMemberOptions : AddCampaignMemberOptions;
 }
 
-export interface AddCampaignMemberResponse {
+export interface addCampaignMemberResponse {
     result : AddCampaignMemberResult;
 }
 
-export interface GetUpdated {
+export interface getUpdated {
     sObjectType : string;
     startDate : Date;
     endDate : Date;
 }
 
-export interface GetUpdatedResponse {
+export interface getUpdatedResponse {
     result : GetUpdatedResult;
 }
 
-export interface GetDeleted {
+export interface getDeleted {
     sObjectType : string;
     startDate : Date;
     endDate : Date;
 }
 
-export interface GetDeletedResponse {
+export interface getDeletedResponse {
     result : GetDeletedResult;
 }
 
-export interface ImpersonateUser {
+export interface impersonateUser {
     userIds? : ID | ID[];
 }
 
-export interface ImpersonateUserResponse {
+export interface impersonateUserResponse {
     result? : ImpersonateUserResult | ImpersonateUserResult[];
 }
 
-export interface Logout {
+export interface logout {
 }
 
-export interface LogoutResponse {
+export interface logoutResponse {
 }
 
-export interface InvalidateSessions {
+export interface invalidateSessions {
     sessionIds? : string | string[];
 }
 
-export interface InvalidateSessionsResponse {
+export interface invalidateSessionsResponse {
     result? : InvalidateSessionsResult | InvalidateSessionsResult[];
 }
 
-export interface CanViewFlow {
+export interface canViewFlow {
     input : FlowAccessInput;
 }
 
-export interface CanViewFlowResponse {
+export interface canViewFlowResponse {
     result : CanViewFlowResult;
 }
 
-export interface StartFlowInterview {
+export interface startFlowInterview {
     request : StartFlowInterviewRequest;
 }
 
-export interface StartFlowInterviewResponse {
+export interface startFlowInterviewResponse {
     result : NavigateFlowInterviewResult;
 }
 
-export interface ResumeFlowInterview {
+export interface resumeFlowInterview {
     request : ResumeFlowInterviewRequest;
 }
 
-export interface ResumeFlowInterviewResponse {
+export interface resumeFlowInterviewResponse {
     result : NavigateFlowInterviewResult;
 }
 
-export interface RunFlowTest {
+export interface runFlowTest {
     request : RunFlowTestInput;
 }
 
-export interface RunFlowTestResponse {
+export interface runFlowTestResponse {
     result? : RunFlowTestResult | RunFlowTestResult[];
 }
 
-export interface GenerateFlowTest {
+export interface generateFlowTest {
     request : string;
 }
 
-export interface GenerateFlowTestResponse {
+export interface generateFlowTestResponse {
     result : GenerateFlowTestResult;
 }
 
-export interface GetFlowInterviewHistory {
+export interface getFlowInterviewHistory {
     request : GetFlowInterviewHistoryRequest;
 }
 
-export interface GetFlowInterviewHistoryResponse {
+export interface getFlowInterviewHistoryResponse {
     result : NavigateFlowInterviewResult;
 }
 
-export interface NavigateFlowInterview {
+export interface navigateFlowInterview {
     request : NavigateFlowInterviewRequest;
 }
 
-export interface NavigateFlowInterviewResponse {
+export interface navigateFlowInterviewResponse {
     result : NavigateFlowInterviewResult;
 }
 
-export interface Query {
+export interface query {
     queryString : string;
 }
 
-export interface QueryResponse {
+export interface queryResponse {
     result : QueryResult;
 }
 
-export interface QueryAll {
+export interface queryAll {
     queryString : string;
 }
 
-export interface QueryAllResponse {
+export interface queryAllResponse {
     result : QueryResult;
 }
 
-export interface QueryMore {
+export interface queryMore {
     queryLocator : QueryLocator;
 }
 
-export interface QueryMoreResponse {
+export interface queryMoreResponse {
     result : QueryResult;
 }
 
-export interface SetupBriefcase {
+export interface setupBriefcase {
 }
 
-export interface SetupBriefcaseResponse {
+export interface setupBriefcaseResponse {
     result : SetupBriefcaseResult;
 }
 
-export interface Search {
+export interface search {
     searchString : string;
 }
 
-export interface SearchResponse {
+export interface searchResponse {
     result : SearchResult;
 }
 
-export interface OutlookSearch {
+export interface outlookSearch {
     searchExpr : string;
     contextString : string;
 }
 
-export interface OutlookSearchResponse {
+export interface outlookSearchResponse {
     result : OutlookSearchResult;
 }
 
-export interface OutlookDescribe {
+export interface outlookDescribe {
 }
 
-export interface OutlookDescribeResponse {
+export interface outlookDescribeResponse {
     result : OutlookDescribeResult;
 }
 
-export interface GetServerTimestamp {
+export interface getServerTimestamp {
 }
 
-export interface GetServerTimestampResponse {
+export interface getServerTimestampResponse {
     result : GetServerTimestampResult;
 }
 
-export interface SetPassword {
+export interface setPassword {
     userId : ID;
     password : string;
 }
 
-export interface SetPasswordResponse {
+export interface setPasswordResponse {
     result : SetPasswordResult;
 }
 
-export interface ChangeOwnPassword {
+export interface changeOwnPassword {
     oldPassword : string;
     newPassword : string;
 }
 
-export interface ChangeOwnPasswordResponse {
+export interface changeOwnPasswordResponse {
     result : ChangeOwnPasswordResult;
 }
 
-export interface ResetPassword {
+export interface resetPassword {
     userId : ID;
 }
 
-export interface ResetPasswordResponse {
+export interface resetPasswordResponse {
     result : ResetPasswordResult;
 }
 
-export interface GetAccessInfo {
+export interface getAccessInfo {
 }
 
-export interface GetAccessInfoResponse {
+export interface getAccessInfoResponse {
     result : GetAccessInfoResult;
 }
 
-export interface GetUserInfo {
+export interface getUserInfo {
 }
 
-export interface GetUserInfoResponse {
+export interface getUserInfoResponse {
     result : GetUserInfoResult;
 }
 
-export interface Activate {
+export interface activate {
     ids? : ID | ID[];
 }
 
-export interface ActivateResponse {
+export interface activateResponse {
     result? : ActivateResult | ActivateResult[];
 }
 
-export interface GenerateJwtToken {
+export interface generateJwtToken {
     claims? : ClaimsMapping | ClaimsMapping[];
 }
 
-export interface GenerateJwtTokenResponse {
+export interface generateJwtTokenResponse {
     result : string;
 }
 
@@ -4530,12 +4530,12 @@ export interface PatchHeader {
     patch : boolean;
 }
 
-export interface Match {
+export interface match {
     sObjects? : sObject | sObject[];
     matchOptions : MatchOptions;
 }
 
-export interface MatchResponse {
+export interface matchResponse {
     result? : MatchResult | MatchResult[];
 }
 
@@ -4894,7 +4894,7 @@ export interface MalformedQueryFault extends Fns_ApiQueryFault {
 export interface MalformedSearchFault extends Fns_ApiQueryFault {
 }
 
-export interface Fault {
+export interface fault {
 }
 
 export interface LoginFault {
