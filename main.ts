@@ -78,8 +78,7 @@ const reservedWords = ['abstract',
 	'volatile',
 	'while',
 	'with',
-	'yield',
-];
+	'yield'];
 
 fs.readdirSync(wsdlFolder).forEach(
 	(wsdlFile: string) => {
@@ -421,5 +420,4 @@ function arraynge<Type>(input: Type | Type[] | undefined): Type[] {
 
 	return Array.isArray(input) ? input : [input];
 }
-
 
